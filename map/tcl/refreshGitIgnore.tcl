@@ -46,6 +46,9 @@ puts $fid0 "!/map/vitis/$xprName/src/*.ld"
 
 puts $fid0 "# script directory"
 puts $fid0 "!/script/"
+puts $fid0 "/script/*"
+puts $fid0 "!/script/*.bat"
+puts $fid0 "!/script/*.do"
 
 puts $fid0 "# sim directory"
 puts $fid0 "!/sim/"

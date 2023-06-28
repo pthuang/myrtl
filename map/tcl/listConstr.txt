@@ -1,2 +1,0 @@
-E:/gtihub/FPGA/ps_test/src/constrs/physical.xdc
-E:/gtihub/FPGA/ps_test/src/constrs/timing.xdc
