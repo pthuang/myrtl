@@ -20,7 +20,7 @@ log:    2020.05.15 create file v0.0
 
 ********************************/
 module spi_slave # (
-    parameter   [31:0] MAIN_CLK_RATE   = 32'd100_000_000, // Default: 100 MHz
+    parameter   [31:0] USER_CLK_RATE   = 32'd100_000_000, // Default: 100 MHz
     parameter   [31:0] SPI_CLK_RATE    = 32'd2_500_000  , // Default: 2.5 MHz
     parameter   [ 0:0] MCS_VALID_LEVEL = 0              , //      
     parameter   [ 1:0] SCK_MODE        = 2'b01          , //  
@@ -41,7 +41,7 @@ module spi_slave # (
 );
 
     //==================< Internal Declaration >============================
-    localparam  SCK_DIV     = MAIN_CLK_RATE/SPI_CLK_RATE;
+    localparam  SCK_DIV     = USER_CLK_RATE/SPI_CLK_RATE;
 
     localparam  IDLE        = 5'b00001  ;
     localparam  SLAVE_BUSY  = 5'b00010  ;
