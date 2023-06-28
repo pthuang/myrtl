@@ -17,8 +17,7 @@ log:    2023.03.01 modify file v1.0 -> Change the comments to English.
 
 
 **********************************************************************/
-module uart_tx #
-(
+module uart_tx # (
     parameter MODULE_CLK_RATE   = 32'd100000000 , // module clock domain, default:100MHz
     parameter UART_BAUDCLK_RATE = 32'd115200      // uart Baudrate, default:115200Hz
 )

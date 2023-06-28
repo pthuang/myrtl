@@ -19,8 +19,7 @@ log:    2020.05.15 create file v0.0
 
 
 ********************************/
-module spi_slave #
-(
+module spi_slave # (
     parameter   [31:0] MAIN_CLK_RATE   = 32'd100_000_000, // Default: 100 MHz
     parameter   [31:0] SPI_CLK_RATE    = 32'd2_500_000  , // Default: 2.5 MHz
     parameter   [ 0:0] MCS_VALID_LEVEL = 0              , //      

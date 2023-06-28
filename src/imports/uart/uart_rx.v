@@ -16,8 +16,7 @@ log:    2021.05.08 create file v0.0
 
 
 ********************************/
-module uart_rx #
-(
+module uart_rx # (
     parameter MODULE_CLK_RATE   = 32'd100000000 , // user clock rate,default: 100 MHz
     parameter UART_BAUDCLK_RATE = 32'd115200      // spi  baud  rate,default: 115200 Hz
 )
