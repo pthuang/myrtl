@@ -1,0 +1,57 @@
+#######################################################
+#                                                      
+#       git management rule Settings                   
+#       ! means need add to git                        
+#       otherwise means need to ignore                 
+#                                                      
+# Can test by "git status -u" check if rules valid   
+#                                                      
+#######################################################
+# ignore all files in root directory
+/*
+# except ".gitignore" file 
+!.gitignore
+# except ".readme.md" file 
+!readme.md
+# except map directory
+!/map/
+# ignore ps_test directory in map directory
+/map/ps_test/*
+/map/*.bat
+/map/*.jou
+/map/*.log
+/map/*.str
+!/map/vitis/
+/map/vitis/*
+!/map/vitis/*xsa
+!/map/vitis/ps_test/
+/map/vitis/ps_test/*
+!/map/vitis/ps_test/src/
+/map/vitis/ps_test/src/*
+!/map/vitis/ps_test/src/*.c
+!/map/vitis/ps_test/src/*.h
+!/map/vitis/ps_test/src/*.ld
+# script directory
+!/script/
+# sim directory
+!/sim/
+# src directory
+!/src/
+/src/bd/*
+# bd directory
+!/src/bd/*.tcl
+# coe directory
+!/src/coe/*
+# constrs directory
+!/src/constrs/*
+# elf directory
+!/src/elf/*
+# src code directory
+!/src/imports/*
+# ip directory
+!/src/ip/src/ip/clk_gen/
+/src/ip/src/ip/clk_gen/*
+!src/ip/src/ip/clk_gen/*.xci
+!src/ip/src/ip/clk_gen/*.prj
+# ip_repo directory
+!/src/ip_repo/*

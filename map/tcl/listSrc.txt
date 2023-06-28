@@ -1,3 +1,4 @@
-E:/gtihub/FPGA/ps_test/src/imports/clk_rst_gen/clk_rst_gen.v
-E:/gtihub/FPGA/ps_test/src/imports/clk_rst_gen/sync_rst_gen.v
-E:/gtihub/FPGA/ps_test/src/imports/top/top.v
+D:/github/myrtl/src/imports/spi/spi_master.v
+D:/github/myrtl/src/imports/spi/spi_slave.v
+D:/github/myrtl/src/imports/uart/uart_rx.v
+D:/github/myrtl/src/imports/uart/uart_tx.v

@@ -1,1 +1,2 @@
-E:/gtihub/FPGA/ps_test/sim/tb_clk_rst_gen/tb_clk_rst_gen.v
+D:/github/myrtl/sim/tb_spi/tb_spi_user.v
+D:/github/myrtl/sim/tb_uart/tb_uart.v
