@@ -1,0 +1,1 @@
+E:/gtihub/FPGA/ps_test/src/ip/clk_gen/clk_gen.xci
