@@ -8,19 +8,19 @@ module tb_spi_user;
 
 //==================< Parameter Declaration >============================
 parameter   CLK_100M        =  10;
-parameter   MAIN_CLK_RATE   =  32'd100_000_000;   //Default: 100 MHz
+parameter   USER_CLK_RATE   =  32'd100_000_000;   //Default: 100 MHz
 parameter   SPI_CLK_RATE    =  32'd2_500_000;     //Default: 2.5 MHz
 parameter   MCS_VALID_LEVEL =  1'b0;    
 parameter   SCK_MODE        =  2'b10;    
 parameter   DATA_ENDIAN     =  1'b1;
 parameter   SPI_DATA_WIDTH  =  16'd16;
 
-parameter   TB_CNT_MAX  =  8*(MAIN_CLK_RATE/SPI_CLK_RATE)*SPI_DATA_WIDTH;
+parameter   TB_CNT_MAX  =  8*(USER_CLK_RATE/SPI_CLK_RATE)*SPI_DATA_WIDTH;
 
 
 //==================< Internal Declaration >=============================
-reg         mclk;
-reg         mrst;
+reg         clk;
+reg         rst;
 reg         tb_en = 0;
 reg [63:0]  cnt0 = 0;
 reg         flag0 = 0;
@@ -43,29 +43,29 @@ wire                        o_rx_evt;
 wire[SPI_DATA_WIDTH-1:0]    o_rx_data;
 
 
-// Generate mclk----------------------------
+// Generate clk----------------------------
 initial 
 begin
-    mclk     <=  0;
-    forever #(CLK_100M/2)   mclk   <=  ~mclk;
+    clk     <=  0;
+    forever #(CLK_100M/2)   clk   <=  ~clk;
 end
 
 
 initial
 begin
-    mrst = 1;
+    rst = 1;
     tb_en = 0;
     #100
-    @(posedge mclk)
-        mrst = 0;
+    @(posedge clk)
+        rst = 0;
     
     #10000;
-    @(posedge mclk)
+    @(posedge clk)
         tb_en = 1;
     
     
     #800000;
-    @(posedge mclk)
+    @(posedge clk)
         tb_en = 0;
 
 end
@@ -91,7 +91,7 @@ end
 
 endgenerate
 
-always@(negedge mclk)
+always@(negedge clk)
 begin
     i_wr_evt    <=  0;
     i_rd_evt    <=  0;
@@ -128,51 +128,45 @@ end
 
 
 //=================< Submodule Instantiation >==========================
-spi_master #
-(
-    .MAIN_CLK_RATE   (MAIN_CLK_RATE     ),    
-    .SPI_CLK_RATE    (SPI_CLK_RATE      ),    
-    .MCS_VALID_LEVEL (MCS_VALID_LEVEL   ),
-    .SCK_MODE        (SCK_MODE          ),    
-    .DATA_ENDIAN     (DATA_ENDIAN       ),
-    .INPUT_WIDTH     (SPI_DATA_WIDTH    ),
-    .OUTPUT_WIDTH    (SPI_DATA_WIDTH    )
-)
-spi_master
-(
-    .mclk       (mclk      ),
-    .mrst       (mrst      ),
-    .i_rd_evt   (i_rd_evt  ),   //spi read event
-    .i_wr_evt   (i_wr_evt  ),   //spi write event
-    .i_wr_data  (i_wr_data ),   //data payload
-    .o_rd_evt   (o_rd_evt  ),   //read data out event(from slave)
-    .o_rd_data  (o_rd_data ),   //data payload
-    .mcs        (mcs       ),
-    .sclk       (sclk      ),
-    .mosi       (mosi      ),
-    .miso       (miso      )
+spi_master # (
+    .USER_CLK_RATE      ( USER_CLK_RATE     ),    
+    .SPI_CLK_RATE       ( SPI_CLK_RATE      ),    
+    .MCS_VALID_LEVEL    ( MCS_VALID_LEVEL   ),
+    .SCK_MODE           ( SCK_MODE          ),    
+    .DATA_ENDIAN        ( DATA_ENDIAN       ),
+    .INPUT_WIDTH        ( SPI_DATA_WIDTH    ),
+    .OUTPUT_WIDTH       ( SPI_DATA_WIDTH    )
+) spi_master (
+    .user_clk           ( clk               ),
+    .user_rst           ( rst               ),
+    .i_rd_evt           ( i_rd_evt          ),   //spi read event
+    .i_wr_evt           ( i_wr_evt          ),   //spi write event
+    .i_wr_data          ( i_wr_data         ),   //data payload
+    .o_rd_evt           ( o_rd_evt          ),   //read data out event(from slave)
+    .o_rd_data          ( o_rd_data         ),   //data payload
+    .mcs                ( mcs               ),
+    .sclk               ( sclk              ),
+    .mosi               ( mosi              ),
+    .miso               ( miso              )
 );
 
 
-spi_slave #
-(
-    .MAIN_CLK_RATE   (MAIN_CLK_RATE     ),    
-    .SPI_CLK_RATE    (SPI_CLK_RATE      ),  
-    .MCS_VALID_LEVEL (MCS_VALID_LEVEL   ),
-    .SCK_MODE        (SCK_MODE          ),    
-    .DATA_ENDIAN     (DATA_ENDIAN       ),
-    .OUTPUT_WIDTH    (SPI_DATA_WIDTH    )
-)
-spi_slave
-(
-    .mclk       (mclk      ),
-    .mrst       (mrst      ),
-    .o_rx_evt   (o_rx_evt  ),   //receive data out event(from master)
-    .o_rx_data  (o_rx_data ),   //data payload
-    .mcs        (mcs       ),
-    .sclk       (sclk      ),
-    .mosi       (mosi      ),
-    .miso       (          )
+spi_slave # (
+    .USER_CLK_RATE      ( USER_CLK_RATE     ),    
+    .SPI_CLK_RATE       ( SPI_CLK_RATE      ),  
+    .MCS_VALID_LEVEL    ( MCS_VALID_LEVEL   ),
+    .SCK_MODE           ( SCK_MODE          ),    
+    .DATA_ENDIAN        ( DATA_ENDIAN       ),
+    .OUTPUT_WIDTH       ( SPI_DATA_WIDTH    )
+) spi_slave (
+    .user_clk           ( clk               ), 
+    .user_rst           ( rst               ), 
+    .o_rx_evt           ( o_rx_evt          ), // receive data out event(from master)
+    .o_rx_data          ( o_rx_data         ), // data payload
+    .mcs                ( mcs               ), 
+    .sclk               ( sclk              ), 
+    .mosi               ( mosi              ), 
+    .miso               (                   )  
 );
 
 

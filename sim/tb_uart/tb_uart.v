@@ -7,15 +7,15 @@ Tools:  Modelsim se-64 10.7
 module tb_uart;
 
 
-parameter MAIN_CLK_RATE = 32'd100_000_000; 
-parameter BAUD_CLK_RATE = 32'd115200;
-parameter TB_CNT_MAX = 15*MAIN_CLK_RATE/BAUD_CLK_RATE;
+parameter MODULE_CLK_RATE = 32'd100_000_000; 
+parameter UART_BAUDCLK_RATE = 32'd115200;
+parameter TB_CNT_MAX = 15*MODULE_CLK_RATE/UART_BAUDCLK_RATE;
 parameter CLK_150M = 6.66;
 parameter CLK_100M = 10;
 
 
-reg         mclk;
-reg         mrst;
+reg         clk;
+reg         rst;
 reg         tb_en;
 reg [31:0]  cnt0;
 reg [31:0]  temp_random;
@@ -28,36 +28,36 @@ wire        uart_tx_done;
 // uart rx signals---------------
 wire        uart_rx_evt_o;
 wire[7:0]   uart_rx_data_o;
-wire        baud_bps_tb;		 //for simulation
+wire        baud_bps_tb;         //for simulation
 
 // generate clock--------------
 initial
 begin
-    mclk = 0;
-    forever #(CLK_100M/2) mclk = ~mclk;
+    clk = 0;
+    forever #(CLK_100M/2) clk = ~clk;
 end
 
 // Generate reset-------------
 initial
 begin
-    mrst = 1;
+    rst = 1;
     tb_en = 0;
     
     
     #100
-    @(posedge mclk)
+    @(posedge clk)
     begin
-        mrst = 0;
+        rst = 0;
     end
     
     #500
-    @(posedge mclk)
+    @(posedge clk)
     begin
         tb_en = 1;
     end
     
     #5000000;
-    @(posedge mclk)
+    @(posedge clk)
     begin
         tb_en = 0;
     end
@@ -67,9 +67,9 @@ end
 
 
 
-always@(posedge mclk or posedge mrst)
+always@(posedge clk or posedge rst)
 begin
-    if(mrst)
+    if(rst)
     begin
         cnt0            <= 'h0;
         temp_random     <= 'h0;
@@ -118,39 +118,30 @@ end
 
 
 
-uart_tx #
-(
-    .MAIN_CLK_RATE  (MAIN_CLK_RATE       ),
-	.BAUD_CLK_RATE  (BAUD_CLK_RATE       )
-)
-uart_tx
-(
-    .mclk           (mclk           ),
-    .mrst           (mrst           ),
-    .uart_tx_data_i (uart_tx_data_i ),
-    .uart_tx_evt_i  (uart_tx_evt_i  ),
-    
-    .uart_tx        (uart_tx_o      ),
-    .uart_tx_done   (uart_tx_done   )
+uart_tx # (
+    .MODULE_CLK_RATE    ( MODULE_CLK_RATE       ),
+    .UART_BAUDCLK_RATE  ( UART_BAUDCLK_RATE     )
+) uart_tx (
+    .clk                ( clk                   ),
+    .rst                ( rst                   ),
+    .uart_tx_data_i     ( uart_tx_data_i        ),
+    .uart_tx_evt_i      ( uart_tx_evt_i         ),
+    .uart_tx            ( uart_tx_o             ),
+    .uart_tx_done       ( uart_tx_done          )
 );
 
 
 
-uart_rx #
-(
-    .MAIN_CLK_RATE  (MAIN_CLK_RATE       ),
-	.BAUD_CLK_RATE  (BAUD_CLK_RATE       )
-)
-uart_rx
-(
-
-    .mclk           (mclk           ),
-    .mrst           (mrst           ),
-    .uart_rx        (uart_tx_o      ),
-    
-    .uart_rx_evt_o  (uart_rx_evt_o  ),
-    .uart_rx_data_o (uart_rx_data_o ),
-    .baud_bps_tb    (baud_bps_tb    )
+uart_rx # (
+    .MODULE_CLK_RATE    ( MODULE_CLK_RATE       ),
+    .UART_BAUDCLK_RATE  ( UART_BAUDCLK_RATE     )
+) uart_rx (
+    .clk                ( clk                   ),
+    .rst                ( rst                   ),
+    .uart_rx            ( uart_tx_o             ),
+    .uart_rx_evt_o      ( uart_rx_evt_o         ),
+    .uart_rx_data_o     ( uart_rx_data_o        ),
+    .baud_bps_tb        ( baud_bps_tb           )
  );
   
 
