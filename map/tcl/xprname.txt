@@ -1,1 +1,1 @@
-ps_test
+myrtl_test

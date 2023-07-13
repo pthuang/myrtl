@@ -1,6 +1,6 @@
 path %psth%;C:\Xilinx\Vivado\2019.2\bin
 @echo off 
-color 0D
+color 09
 echo ***************************************************
 echo *
 echo *
@@ -11,4 +11,4 @@ echo *
 echo *
 echo ***************************************************
 
-vivado -source ./tcl/updateGitRules.tcl
+vivado -mode tcl -source ./tcl/flowControl.tcl

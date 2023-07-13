@@ -1,7 +1,7 @@
 # process define 
 proc findFiles {path result args } {
     if {![file exists $path] || ![file isdirectory $path]} {
-        return -code error "File not exists or not a directory."
+        return -code error "__________| File not exists or not a directory. |__________"
     }
     # set files [glob -nocomplain -directory $path/ -tails *]
     set files [glob -nocomplain -directory $path/ *]
@@ -10,7 +10,8 @@ proc findFiles {path result args } {
             set fileExtName [file extension $i_file]    
             foreach i_args $args {
                 if {$fileExtName == $i_args} {
-                    puts $i_file
+                    puts "__________| Object File Name is:$i_file |__________"
+                    # puts $i_file
                     # puts [string length $path]
                     # puts [string range $i_file [string length $path]+1 end]
                     # puts [string range $i_file [string length $path]+1 end-[string length $i_args]]

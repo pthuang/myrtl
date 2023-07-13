@@ -15,29 +15,31 @@
 !readme.md
 # except map directory
 !/map/
-# ignore ps_test directory in map directory
-/map/ps_test/*
+# ignore myrtl_test directory in map directory
+/map/myrtl_test/*
 /map/*.bat
 /map/*.jou
 /map/*.log
 /map/*.str
 !/map/vitis/
 /map/vitis/*
-!/map/vitis/*xsa
-!/map/vitis/ps_test/
-/map/vitis/ps_test/*
-!/map/vitis/ps_test/src/
-/map/vitis/ps_test/src/*
-!/map/vitis/ps_test/src/*.c
-!/map/vitis/ps_test/src/*.h
-!/map/vitis/ps_test/src/*.ld
+!/map/vitis/*.xsa
+!/map/vitis/*.bit
+!/map/vitis/myrtl_test/
+/map/vitis/myrtl_test/*
+!/map/vitis/myrtl_test/src/
+/map/vitis/myrtl_test/src/*
+!/map/vitis/myrtl_test/src/*.c
+!/map/vitis/myrtl_test/src/*.h
+!/map/vitis/myrtl_test/src/*.ld
 # script directory
 !/script/
 /script/*
+!/script/tb_m_spi_do/
 !/script/tb_spi_do/
 !/script/tb_uart_do/
 !/script/*.bat
-!/script/*.v
+!/script/*.do
 # sim directory
 !/sim/
 # src directory

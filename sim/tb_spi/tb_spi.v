@@ -3,7 +3,7 @@
 simulation time consumed: 900 us
 Tools:  Modelsim se-64 10.7
 ***********************************************************/
-module tb_spi_user;
+module tb_spi;
 
 
 //==================< Parameter Declaration >============================

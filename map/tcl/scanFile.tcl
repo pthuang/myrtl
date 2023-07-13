@@ -4,6 +4,10 @@
 source findFiles.tcl
 
 
+proc printCreateDirMessage {} {
+	puts "__________| Directory is not exist and will create it! |__________"
+}
+
 ###############################################################
 # scan source files 
 ###############################################################
@@ -20,7 +24,7 @@ if {[file exist src]} {
 	findFiles $srcPath $fid ".v" ".vh" ".vhd" ".sv"
 	close $fid
 } else {
-	puts "Directory is not exist and will create it!"
+	printCreateDirMessage
 	file mkdir src 
 	cd $tclDir
 }
@@ -42,7 +46,7 @@ if {[file exist sim]} {
 	findFiles $simPath $fid ".v" ".vh" ".vhd" ".sv"
 	close $fid
 } else {
-	puts "Directory is not exist and will create it!"
+	printCreateDirMessage
 	file mkdir sim 
 	cd $tclDir
 }
@@ -64,7 +68,7 @@ if {[file exist bd]} {
 	findFiles $bdPath $fid ".bd"
 	close $fid
 } else {
-	puts "Directory is not exist and will create it!"
+	printCreateDirMessage
 	file mkdir bd 
 	cd $tclDir
 }
@@ -86,7 +90,7 @@ if {[file exist ip]} {
 	findFiles $ipPath $fid ".xci"
 	close $fid
 } else {
-	puts "Directory is not exist and will create it!"
+	printCreateDirMessage
 	file mkdir ip 
 	cd $tclDir
 }
@@ -108,7 +112,7 @@ if {[file exist constrs]} {
 	findFiles $constrPath $fid ".xdc" ".ucf" 
 	close $fid
 } else {
-	puts "Directory is not exist and will create it!"
+	printCreateDirMessage
 	file mkdir constrs 
 	cd $tclDir
 }

@@ -35,7 +35,8 @@ puts $fid0 "/map/*.str"
 
 puts $fid0 "!/map/vitis/" 
 puts $fid0 "/map/vitis/*" 
-puts $fid0 "!/map/vitis/*xsa" 
+puts $fid0 "!/map/vitis/*.xsa" 
+puts $fid0 "!/map/vitis/*.bit" 
 puts $fid0 "!/map/vitis/$xprName/" 
 puts $fid0 "/map/vitis/$xprName/*" 
 puts $fid0 "!/map/vitis/$xprName/src/" 
@@ -47,6 +48,19 @@ puts $fid0 "!/map/vitis/$xprName/src/*.ld"
 puts $fid0 "# script directory"
 puts $fid0 "!/script/"
 puts $fid0 "/script/*"
+
+set simfid [open $tclDir/listSim.txt r]
+set simfile [read $simfid]
+foreach line $simfile { 
+	set tbname [string range [file dirname $line] [string length $simDir]+1 end]
+	puts "__________| Object ip File is:$line |__________"
+	puts "__________| Object ip Name is:$tbname |__________" 
+	set doname [append tbname "_do"]
+	puts $fid0 "!/script/$doname/" 
+	# puts $fid0 "/src/ip/$doname/*"
+	# puts $fid0 "!/src/ip/$doname/*.do"
+}
+close $simfid
 puts $fid0 "!/script/*.bat"
 puts $fid0 "!/script/*.do"
 
@@ -88,14 +102,16 @@ set ipfid [open $tclDir/listIp.txt r]
 set ipfile [read $ipfid]
 foreach line $ipfile { 
 	set ipname [string range [file dirname $line] [string length $ipDir]+1 end]
-	puts $line
+	puts "__________| Object ip File is:$line |__________"
+	# puts $line
 	# puts [file dirname $line]
 	# puts [file rootname $line]
 	# puts [file tail $line]
 	# puts [file extension $line]
 	# puts [string length $ipDir]
 	# puts [string range $line [string length $ipDir]+1 end]
-	puts $ipname
+	puts "__________| Object ip Name is:$ipname |__________"
+	# puts $ipname
 	puts $fid0 "!/src/ip/$ipname/"
 	puts $fid0 "/src/ip/$ipname/*"
 	puts $fid0 "!src/ip/$ipname/*.xci"
