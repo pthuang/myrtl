@@ -42,11 +42,9 @@ module m_spi # (
     localparam  SCK_DIV         = USER_CLK_RATE/SPI_CLK_RATE;
     localparam  PAYLOAD_WIDTH   = AWIDTH + DWIDTH + 1;
 
-    localparam  IDLE        = 5'b00001;
-    localparam  BUSY        = 5'b00010;
-    localparam  MASTER_OUT  = 5'b00100;
-    // localparam   SLAVE_BUSY  = 5'b01000;
-    // localparam   SLAVE_OUT   = 5'b10000;
+    localparam  IDLE        = 3'b001;
+    localparam  BUSY        = 3'b010;
+    localparam  MASTER_OUT  = 3'b100;
 
 
     reg [04:00]             c_state     ;
