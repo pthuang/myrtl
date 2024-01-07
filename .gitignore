@@ -35,6 +35,7 @@
 # script directory
 !/script/
 /script/*
+!/script/tb_arbitor_do/
 !/script/tb_m_spi_do/
 !/script/tb_spi_do/
 !/script/tb_uart_do/
