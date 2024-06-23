@@ -1,81 +1,72 @@
-/*******************************************
-File_name:      s_spi.v
-Project_name:   project_name
-Author:         pthuang
-Function:
-
-        MCS_VALID_LEVEL : 1: high level 0: low level
-        SCK_DIV         : spi sclk rate is user_clk/SCK_DIV
-        SCK_MODE        : [1]: 0 means the IDLE level of sck is low; 
-                [0]:1 means mosi(miso) switch data at negeage of sck 
-                and capture the data at posedge of clk. 
-                            ___
-        o_rd_samp_evt _____|  |________________     
-                      _________________________
-        i_rd_data     ________|________________
-
-version: 1.0
-
-
-log:    2022.07.12 create file v1.0
-
-
-*******************************************/
+//=========================================================================================
+// File_name    : s_spi.v 
+// Project_name : project_name
+// Author       : pthuang
+// Function     : MCS_VALID_LEVEL : 1: high level 0: low level
+//                SCK_DIV         : spi sclk rate is user_clk/SCK_DIV
+//                SCK_MODE        : [1]: 0 means the IDLE level of sck is low; 
+//                                  [0]: 1 means mosi(miso) switch data at negeage of sck 
+//                                       and capture the data at posedge of clk. 
+//                                    ___
+//                o_rd_samp_evt _____|  |________________     
+//                              _________________________
+//                i_rd_data     ________|________________
+// 
+// version      : V2.0
+// log          : 2020.07.12 create file v1.0
+//                2024.06.23 modify file v2.0
+//=========================================================================================
 module s_spi # (
-    parameter [31:0] USER_CLK_RATE   = 32'd100_000_000, // Default: 100 MHz
-    parameter [31:0] SPI_CLK_RATE    = 32'd2_500_000  , // Default: 2.5 MHz
-    parameter [ 0:0] MCS_VALID_LEVEL = 0              , // 
-    parameter [ 1:0] SCK_MODE        = 2'b01          , //   
-    parameter [15:0] AWIDTH          = 16             , // 
-    parameter [15:0] DWIDTH          = 16               // 
-) ( 
-    input                   user_clk            , // user clock 
-    input                   user_rst            , // user reset, Async valid hign 
-    output reg              o_wr_evt            , // receive data out event(from master)
-    output reg[DWIDTH-1:0]  o_wr_data           , // data payload
-    output reg[AWIDTH-1:0]  o_addr              , // address 
-    output reg              o_rd_samp_evt       , // receive data out event(from master)
-    input     [DWIDTH-1:0]  i_rd_data           , // kick data to master 
-    input                   mcs                 , // 4-line spi 
-    input                   sclk                , // 4-line spi 
-    input                   mosi                , // 4-line spi 
-    output reg              miso                  // 4-line spi 
+    parameter   [31:00]         USER_CLK_RATE   = 32'd100_000_000   , // Default: 100 MHz
+    parameter   [31:00]         SPI_CLK_RATE    = 32'd2_500_000     , // Default: 2.5 MHz
+    parameter   [00:00]         MCS_VALID_LEVEL = 0                 , // 
+    parameter   [01:00]         SCK_MODE        = 2'b01             , //   
+    parameter   [15:00]         AWIDTH          = 16                , // 
+    parameter   [15:00]         DWIDTH          = 16                  // 
+) (     
+    input                       user_clk                            , // user clock 
+    input                       user_rst                            , // user reset, Async valid hign 
+    output reg                  o_wr_evt                            , // receive data out event(from master)
+    output reg  [DWIDTH-1:0]    o_wr_data                           , // data payload
+    output reg  [AWIDTH-1:0]    o_addr                              , // address 
+    output reg                  o_rd_samp_evt                       , // receive data out event(from master)
+    input       [DWIDTH-1:0]    i_rd_data                           , // kick data to master 
+    input                       mcs                                 , // 4-line spi 
+    input                       sclk                                , // 4-line spi 
+    input                       mosi                                , // 4-line spi 
+    output reg                  miso                                  // 4-line spi 
 );
 
     //==================< Internal Declaration >============================
-    localparam SCK_DIV          = USER_CLK_RATE/SPI_CLK_RATE;
-    localparam PAYLOAD_WIDTH    = AWIDTH + DWIDTH + 1;
+    localparam SCK_DIV          = USER_CLK_RATE/SPI_CLK_RATE/2  ;
+    localparam PAYLOAD_WIDTH    = AWIDTH + DWIDTH + 1           ;
+    localparam IDLE             = 3'b001                        ;
+    localparam SLAVE_BUSY       = 3'b010                        ;
+    localparam SLAVE_OUT        = 3'b100                        ;
 
-    localparam IDLE         = 3'b001    ;
-    localparam SLAVE_BUSY   = 3'b010    ;
-    localparam SLAVE_OUT    = 3'b100    ;
+    reg         [04:00]         c_state                         ;
+    reg         [04:00]         n_state                         ;
+    reg                         mcs_r                           ;
+    reg                         sclk_r                          ;
+    wire                        mcs_posedge                     ;
+    wire                        mcs_negedge                     ;
+    wire                        sck_posedge                     ;
+    wire                        sck_negedge                     ;
+    reg                         rw_mode                         ; // 1: read 0: write  
+    reg         [31:00]         cnt_bit                         ;
+    reg                         rx_addr_evt                     ;
+    reg         [AWIDTH-1:0]    rx_addr                         ;
+    reg                         rx_evt                          ;
+    reg         [DWIDTH-1:0]    rx_data                         ; 
+    reg                         rd_samp_evt_r0                  ; 
+    reg                         rd_samp_evt_r1                  ; 
+    reg         [DWIDTH-1:0]    rd_data_r                       ; 
+    reg         [DWIDTH-1:0]    rd_data_buf                     ; 
 
-    reg [04:00]             c_state     ;
-    reg [04:00]             n_state     ;
-
-    reg                     mcs_r       ;
-    reg                     sclk_r      ;
-    wire                    mcs_posedge ;
-    wire                    mcs_negedge ;
-    wire                    sck_posedge ;
-    wire                    sck_negedge ;
-
-    reg                     rw_mode         ; // 1: read 0: write  
-    reg [31:00]             cnt_bit         ;
-    reg                     rx_addr_evt     ;
-    reg [AWIDTH-1:0]        rx_addr         ;
-    reg                     rx_evt          ;
-    reg [DWIDTH-1:0]        rx_data         ; 
-    reg                     rd_samp_evt_r0  ; 
-    reg                     rd_samp_evt_r1  ; 
-    reg [DWIDTH-1:0]        rd_data_r       ; 
-    reg [DWIDTH-1:0]        rd_data_buf     ; 
-
-    assign mcs_posedge = (~mcs_r && mcs);
-    assign mcs_negedge = (mcs_r && ~mcs);
-    assign sck_posedge = (~sclk_r && sclk);
-    assign sck_negedge = (sclk_r && ~sclk);
-
+    assign mcs_posedge = (~mcs_r  &&  mcs );
+    assign mcs_negedge = ( mcs_r  && ~mcs );
+    assign sck_posedge = (~sclk_r &&  sclk);
+    assign sck_negedge = ( sclk_r && ~sclk);
     //=======================< Debug Logic >================================
 
 

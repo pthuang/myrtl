@@ -1,62 +1,56 @@
-/*******************************************
-File_name:      m_spi.v 
-Project_name:   project_name
-Author:         pthuang
-Function:
-
-        MCS_VALID_LEVEL : 1: high level 0: low level
-        SCK_DIV         : spi sclk rate is user_clk/SCK_DIV
-        SCK_MODE        : [1]: 0 means the IDLE level of sck is low; 
-                          [0]: 1 means mosi(miso) switch data at negeage of sck 
-                          and capture the data at posedge of clk. 
-
-version: 1.0
-
-log:    2020.07.12 create file v1.0
-
-*******************************************/
+//=========================================================================================
+// File_name    : m_spi.v 
+// Project_name : project_name
+// Author       : pthuang
+// Function     : MCS_VALID_LEVEL   : 1: high level 0: low level
+//                SCK_DIV           : spi sclk rate is user_clk/(2*SCK_DIV)
+//                SCK_MODE          : [1]: 0 means the IDLE level of sck is low; 
+//                                    [0]: 1 means mosi(miso) switch data at negeage of sck 
+//                                         and capture the data at posedge of clk. 
+// 
+// version      : V2.0
+// log          : 2020.07.12 create file v1.0
+//                2024.06.23 modify file v2.0
+//=========================================================================================
 module m_spi # (
-    parameter [31:0] USER_CLK_RATE    = 32'd100_000_000, // Default: 100 MHz
-    parameter [31:0] SPI_CLK_RATE     = 32'd2_500_000  , // Default: 2.5 MHz
-    parameter [ 0:0] MCS_VALID_LEVEL  = 0              , //   
-    parameter [ 1:0] SCK_MODE         = 2'b01          , //    
-    parameter [15:0] AWIDTH           = 16             , // 
-    parameter [15:0] DWIDTH           = 8                // 
+    parameter   [31:00]         USER_CLK_RATE    = 32'd100_000_000  , // Default: 100 MHz
+    parameter   [31:00]         SPI_CLK_RATE     = 32'd2_500_000    , // Default: 2.5 MHz
+    parameter   [00:00]         MCS_VALID_LEVEL  = 0                , //   
+    parameter   [01:00]         SCK_MODE         = 2'b01            , //    
+    parameter   [15:00]         AWIDTH           = 16               , // 
+    parameter   [15:00]         DWIDTH           = 8                  // 
 ) ( 
-    input                       user_clk        , // user clock 
-    input                       user_rst        , // user reset, Async valid hign 
-    input                       i_rd_evt        , // spi read event
-    input                       i_wr_evt        , // spi write event
-    input     [DWIDTH-1:0]      i_wr_data       , // data payload
-    input     [AWIDTH-1:0]      i_addr          , // address 
-    output reg                  o_rd_evt        , // read data out event(from slave)
-    output reg[DWIDTH-1:0]      o_rd_data       , // data payload 
-    output reg                  o_rw_done_evt   , // read/write done 
-    output reg                  mcs             , // 4-line spi 
-    output reg                  sclk            , // 4-line spi 
-    output reg                  mosi            , // 4-line spi 
-    input                       miso              // 4-line spi 
+    input                       user_clk                            , // user clock 
+    input                       user_rst                            , // user reset, Async valid hign 
+    input                       i_rd_evt                            , // spi read event
+    input                       i_wr_evt                            , // spi write event
+    input       [DWIDTH-1:0]    i_wr_data                           , // data payload
+    input       [AWIDTH-1:0]    i_addr                              , // address 
+    output reg                  o_rd_evt                            , // read data out event(from slave)
+    output reg  [DWIDTH-1:0]    o_rd_data                           , // data payload 
+    output reg                  o_rw_done_evt                       , // read/write done 
+    output reg                  mcs                                 , // 4-line spi 
+    output reg                  sclk                                , // 4-line spi 
+    output reg                  mosi                                , // 4-line spi 
+    input                       miso                                  // 4-line spi 
 );
 
     //==================< Internal Declaration >============================
-    localparam  SCK_DIV         = USER_CLK_RATE/SPI_CLK_RATE;
-    localparam  PAYLOAD_WIDTH   = AWIDTH + DWIDTH + 1;
+    localparam  SCK_DIV         = USER_CLK_RATE/SPI_CLK_RATE/2  ;
+    localparam  PAYLOAD_WIDTH   = AWIDTH + DWIDTH + 1           ;
+    localparam  IDLE            = 3'b001                        ;
+    localparam  BUSY            = 3'b010                        ;
+    localparam  MASTER_OUT      = 3'b100                        ;
 
-    localparam  IDLE        = 3'b001;
-    localparam  BUSY        = 3'b010;
-    localparam  MASTER_OUT  = 3'b100;
-
-
-    reg [04:00]             c_state     ;
-    reg [04:00]             n_state     ;
-
-    reg [PAYLOAD_WIDTH-1:0] tx_payload  ;
-    reg                     rd_en       ;
-    reg [31:00]             cnt_mbusy   ;
-    reg [31:00]             cnt_bit     ;
-    reg                     rw_mode     ; // 1: read 0: write 
-    reg                     read_evt    ;
-    reg [PAYLOAD_WIDTH-1:0] rx_payload  ;
+    reg         [04:00]             c_state                     ;
+    reg         [04:00]             n_state                     ;
+    reg         [PAYLOAD_WIDTH-1:0] tx_payload                  ;
+    reg                             rd_en                       ;
+    reg         [31:00]             cnt_mbusy                   ;
+    reg         [31:00]             cnt_bit                     ;
+    reg                             rw_mode                     ; // 1: read 0: write 
+    reg                             read_evt                    ;
+    reg         [PAYLOAD_WIDTH-1:0] rx_payload                  ;
 
     //=======================< Debug Logic >================================
 
@@ -215,10 +209,6 @@ module m_spi # (
             end
             endcase 
         end
-    end
-
-
-
-
+    end 
 
 endmodule
