@@ -1,3 +1,4 @@
+D:/github/myrtl/sim/tb_arbitor/tb_arbitor.v
 D:/github/myrtl/sim/tb_m_spi/tb_m_spi.v
 D:/github/myrtl/sim/tb_spi/tb_spi.v
 D:/github/myrtl/sim/tb_uart/tb_uart.v
