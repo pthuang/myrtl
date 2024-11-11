@@ -5,9 +5,9 @@
 // Function     : coarctation pulse some times
 //                     __________________________
 // pulse_in       ____|                         |_________
-//                     _____
-// pulse_out      ____|    |______________________________
-//                         |<---- remain_num --->|       
+//                     _________________
+// pulse_out      ____|                |__________________
+//                    |<- remain_num ->|           
 // Delay        : 1 cycle   
 // Version      : V1.0 
 // Log          : 2024.11.06 create file V1.0     

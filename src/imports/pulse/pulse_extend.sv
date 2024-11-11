@@ -3,11 +3,11 @@
 // Project_name : xxx.xpr
 // Author       : pthuang 
 // Function     : hold pulse some times
-//                                      _______
-// pulse_in       _____________________|      |____________________________
-//                     _________________________________________
-// pulse_out      ____|                                        |___________
-//                    |<- extend_num ->|      |<- extend_num ->|         
+//                                        _______
+// pulse_in       _______________________|      |____________________________
+//                     _____________________________________________
+// pulse_out      ____|                                            |_________
+//                    |<- extend_num_l ->|      |<- extend_num_r ->|         
 // Delay        : 1 cycle    
 // Version      : V1.0 
 // Log          : 2024.11.06 create file V1.0  
