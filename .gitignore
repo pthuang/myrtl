@@ -34,10 +34,9 @@
 !/map/vitis/myrtl_test/src/*.ld
 # script directory
 !/script/
-/script/*
-!/script/*.bat
-!/script/*.do
-!/script/*.v
+/script/transcript
+/script/vsim.wlf
+/script/work
 # sim directory
 !/sim/
 # src directory
