@@ -27,14 +27,19 @@ source $tclDir/writeXpr2Tcl.tcl
 # synth_ip [get_ips]
 source $tclDir/runSynthesis.tcl
 
-# export platform file(.hdf or .xsa) 
+# # export platform file(.hdf or .xsa) 
 # source $tclDir/exportPlatform.tcl
 
 # generate and backup bit file 
 # source $tclDir/runGenerateBit.tcl
 
-# backup bit file 
+# # backup bit file 
 # source $tclDir/backupBit.tcl
+
+# generate bin file 
+# source $tclDir/generateBin.tcl
 
 # open Vivado GUI 
 start_gui
+
+# exit

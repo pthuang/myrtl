@@ -95,6 +95,27 @@ if {[file exist ip]} {
 	cd $tclDir
 }
 
+###############################################################
+# scan ila ip files 
+###############################################################
+cd $srcDir
+if {[file exist ip_debug]} {
+	cd $tclDir
+	# scan 
+	set ipFileName "./listIpDebug.txt"
+	set ipPath $ipDebugDir
+	set status [catch {set fid [open $ipFileName w+]} msg]
+	if {$status} { 
+		puts $msg
+	} 
+	findFiles $ipPath $fid ".xci"
+	close $fid
+} else {
+	printCreateDirMessage
+	file mkdir ip 
+	cd $tclDir
+}
+
 
 ###############################################################
 # scan constrains files 

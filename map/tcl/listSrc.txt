@@ -1,3 +1,4 @@
+D:/github/myrtl/src/imports/arbitor/arbitor.v
 D:/github/myrtl/src/imports/spi/m_spi.v
 D:/github/myrtl/src/imports/spi/spi_master.v
 D:/github/myrtl/src/imports/spi/spi_slave.v

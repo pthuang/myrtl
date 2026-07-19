@@ -48,21 +48,9 @@ puts $fid0 "!/map/vitis/$xprName/src/*.ld"
 puts $fid0 "# script directory"
 puts $fid0 "!/script/"
 puts $fid0 "/script/*"
-
-set simfid [open $tclDir/listSim.txt r]
-set simfile [read $simfid]
-foreach line $simfile { 
-	set tbname [string range [file dirname $line] [string length $simDir]+1 end]
-	puts "__________| Object ip File is:$line |__________"
-	puts "__________| Object ip Name is:$tbname |__________" 
-	set doname [append tbname "_do"]
-	puts $fid0 "!/script/$doname/" 
-	# puts $fid0 "/src/ip/$doname/*"
-	# puts $fid0 "!/src/ip/$doname/*.do"
-}
-close $simfid
 puts $fid0 "!/script/*.bat"
 puts $fid0 "!/script/*.do"
+puts $fid0 "!/script/*.v"
 
 puts $fid0 "# sim directory"
 puts $fid0 "!/sim/"
@@ -123,8 +111,22 @@ foreach line $ipfile {
 }
 close $ipfid
 
-# puts $fid0 "# tcl directory"
-# puts $fid0 "!/src/tcl/*"
+
+puts $fid0 "# ila ip directory"
+set ipfid [open $tclDir/listIpDebug.txt r]
+set ipfile [read $ipfid]
+foreach line $ipfile { 
+	set ipname [string range [file dirname $line] [string length $ipDir]+1 end]
+	puts "__________| Object ila ip File is:$line |__________"
+	puts "__________| Object ila ip Name is:$ipname |__________"
+	# puts $ipname
+	puts $fid0 "!/src/ip_ila/$ipname/"
+	puts $fid0 "/src/ip_ila/$ipname/*"
+	puts $fid0 "!src/ip_ila/$ipname/*.xci"
+	puts $fid0 "!src/ip_ila/$ipname/*.prj"
+}
+close $ipfid
+
 
 puts $fid0 "# ip_repo directory"
 puts $fid0 "!/src/ip_repo/*"
