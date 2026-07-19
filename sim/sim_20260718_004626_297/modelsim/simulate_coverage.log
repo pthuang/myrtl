@@ -1,0 +1,50 @@
+# do {simulate_coverage.do}
+# vsim -coverage -voptargs=""+acc"" -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm -lib xil_defaultlib xil_defaultlib.tb_arbitor xil_defaultlib.glbl 
+# Start time: 11:03:39 on Jul 18,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.tb_arbitor(fast)
+# Loading work.arbitor(fast)
+# Loading work.glbl(fast)
+# 1
+# 1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: alftor  Hostname: HUNTER  ProcessID: 26628
+#           Attempting to use alternate WLF file "./wlft5i9fci".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5i9fci
+# === TB: arbitor coverage-driven testbench ===
+# Phase 0: Reset
+# Phase 1: Link init + cnt_1s run
+# Phase 1b: Force cnt_1s high bits
+# Phase 2: Single events
+# Phase 3: Event pairs
+# Phase 4: Event triples
+# Phase 5: Event quads
+# Phase 6: Event quints
+# Phase 7: Event sextets
+# Phase 8: Event septets
+# Phase 9: Full FIFO fill (all 9)
+# Phase 10: iotx_tvalid=1 blocking test
+# Phase 11: Runtime reset
+# Phase 12: Link de-initialization
+# Phase 13: no_evt=0 concurrent input/output
+# Phase 14: evt_flag propagation
+# Phase 15: Back-to-back events
+# Phase 16: iotx_tvalid toggling
+# Phase 17: Exhaustive evt_flag cascade
+# === DONE ===
+# End time: 11:03:43 on Jul 18,2026, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 2

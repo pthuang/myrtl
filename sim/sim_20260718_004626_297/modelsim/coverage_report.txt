@@ -1,0 +1,1708 @@
+Coverage Report by file with details
+
+=================================================================================
+=== File: ../../../src/imports/arbitor/arbitor.v
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                       134       104        30    77.61%
+
+================================Branch Details================================
+
+Branch Coverage for file ../../../src/imports/arbitor/arbitor.v --
+
+------------------------------------IF Branch------------------------------------
+    46                                    781252     Count coming in to IF
+    46              1                         19             if ( rst ) begin
+    49              1                     781233             end else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    51                                    781233     Count coming in to IF
+    51              1                     781189                 if(link_initialized) begin
+                                              44     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    61                                      3041     Count coming in to IF
+    61              1                          4             if(rst ) begin
+    88              1                       3037             end else begin 
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    98                                      3037     Count coming in to IF
+    98              1                        215                 if(fifo[8][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out ) begin
+    111             1                       2822                 end else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    100                                      215     Count coming in to CASE
+    101             1                         56                     4'd1: event_out_0 <= 1;
+    102             1                         36                     4'd2: event_out_1 <= 1;
+    103             1                         21                     4'd3: event_out_2 <= 1;
+    104             1                         13                     4'd4: event_out_3 <= 1;
+    105             1                         10                     4'd5: event_out_4 <= 1;
+    106             1                         11                     4'd6: event_out_5 <= 1;
+    107             1                         15                     4'd7: event_out_6 <= 1;
+    108             1                         21                     4'd8: event_out_7 <= 1;
+    109             1                         32                     4'd9: event_out_8 <= 1;
+                                         ***0***     All False Count
+Branch totals: 9 hits of 10 branches = 90.00%
+
+------------------------------------IF Branch------------------------------------
+    112                                     2822     Count coming in to IF
+    112             1                         86                     if(fifo[7][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out ) begin
+    125             1                       2736                     end else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    114                                       86     Count coming in to CASE
+    115             1                    ***0***                             4'd1: event_out_0 <= 1;
+    116             1                          5                             4'd2: event_out_1 <= 1;
+    117             1                         11                             4'd3: event_out_2 <= 1;
+    118             1                         15                             4'd4: event_out_3 <= 1;
+    119             1                         16                             4'd5: event_out_4 <= 1;
+    120             1                         15                             4'd6: event_out_5 <= 1;
+    121             1                         13                             4'd7: event_out_6 <= 1;
+    122             1                         10                             4'd8: event_out_7 <= 1;
+    123             1                          1                             4'd9: event_out_8 <= 1;
+                                         ***0***     All False Count
+Branch totals: 8 hits of 10 branches = 80.00%
+
+------------------------------------IF Branch------------------------------------
+    126                                     2736     Count coming in to IF
+    126             1                         16                         if ( fifo[6][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out ) begin
+    139             1                       2720                         end else begin 
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    128                                       16     Count coming in to CASE
+    129             1                          2                                 4'd1: event_out_0 <= 1;
+    130             1                          2                                 4'd2: event_out_1 <= 1;
+    131             1                          2                                 4'd3: event_out_2 <= 1;
+    132             1                          1                                 4'd4: event_out_3 <= 1;
+    133             1                          2                                 4'd5: event_out_4 <= 1;
+    134             1                          2                                 4'd6: event_out_5 <= 1;
+    135             1                          5                                 4'd7: event_out_6 <= 1;
+    136             1                    ***0***                                 4'd8: event_out_7 <= 1;
+    137             1                    ***0***                                 4'd9: event_out_8 <= 1;
+                                         ***0***     All False Count
+Branch totals: 7 hits of 10 branches = 70.00%
+
+------------------------------------IF Branch------------------------------------
+    140                                     2720     Count coming in to IF
+    140             1                          8                             if ( fifo[5][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out ) begin
+    153             1                       2712                             end else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    142                                        8     Count coming in to CASE
+    143             1                    ***0***                                     4'd1: event_out_0 <= 1;
+    144             1                          1                                     4'd2: event_out_1 <= 1;
+    145             1                    ***0***                                     4'd3: event_out_2 <= 1;
+    146             1                          1                                     4'd4: event_out_3 <= 1;
+    147             1                    ***0***                                     4'd5: event_out_4 <= 1;
+    148             1                          4                                     4'd6: event_out_5 <= 1;
+    149             1                    ***0***                                     4'd7: event_out_6 <= 1;
+    150             1                    ***0***                                     4'd8: event_out_7 <= 1;
+    151             1                          2                                     4'd9: event_out_8 <= 1;
+                                         ***0***     All False Count
+Branch totals: 4 hits of 10 branches = 40.00%
+
+------------------------------------IF Branch------------------------------------
+    154                                     2712     Count coming in to IF
+    154             1                          8                                 if ( fifo[4][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out ) begin
+    167             1                       2704                                 end else begin 
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    156                                        8     Count coming in to CASE
+    157             1                          1                                     4'd1: event_out_0 <= 1;
+    158             1                    ***0***                                     4'd2: event_out_1 <= 1;
+    159             1                    ***0***                                     4'd3: event_out_2 <= 1;
+    160             1                    ***0***                                     4'd4: event_out_3 <= 1;
+    161             1                          5                                     4'd5: event_out_4 <= 1;
+    162             1                    ***0***                                     4'd6: event_out_5 <= 1;
+    163             1                    ***0***                                     4'd7: event_out_6 <= 1;
+    164             1                          1                                     4'd8: event_out_7 <= 1;
+    165             1                          1                                     4'd9: event_out_8 <= 1;
+                                         ***0***     All False Count
+Branch totals: 4 hits of 10 branches = 40.00%
+
+------------------------------------IF Branch------------------------------------
+    168                                     2704     Count coming in to IF
+    168             1                          9                                     if ( fifo[3][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out ) begin
+    181             1                       2695                                     end else begin 
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    170                                        9     Count coming in to CASE
+    171             1                    ***0***                                         4'd1: event_out_0 <= 1;
+    172             1                    ***0***                                         4'd2: event_out_1 <= 1;
+    173             1                    ***0***                                         4'd3: event_out_2 <= 1;
+    174             1                          5                                         4'd4: event_out_3 <= 1;
+    175             1                    ***0***                                         4'd5: event_out_4 <= 1;
+    176             1                          1                                         4'd6: event_out_5 <= 1;
+    177             1                          1                                         4'd7: event_out_6 <= 1;
+    178             1                          1                                         4'd8: event_out_7 <= 1;
+    179             1                          1                                         4'd9: event_out_8 <= 1;
+                                         ***0***     All False Count
+Branch totals: 5 hits of 10 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    182                                     2695     Count coming in to IF
+    182             1                         13                                         if ( fifo[2][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out) begin
+    195             1                       2682                                         end else begin 
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    184                                       13     Count coming in to CASE
+    185             1                    ***0***                                             4'd1: event_out_0 <= 1;
+    186             1                          1                                             4'd2: event_out_1 <= 1;
+    187             1                          5                                             4'd3: event_out_2 <= 1;
+    188             1                    ***0***                                             4'd4: event_out_3 <= 1;
+    189             1                    ***0***                                             4'd5: event_out_4 <= 1;
+    190             1                    ***0***                                             4'd6: event_out_5 <= 1;
+    191             1                          3                                             4'd7: event_out_6 <= 1;
+    192             1                          2                                             4'd8: event_out_7 <= 1;
+    193             1                          2                                             4'd9: event_out_8 <= 1;
+                                         ***0***     All False Count
+Branch totals: 5 hits of 10 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    196                                     2682     Count coming in to IF
+    196             1                         50                                             if ( fifo[1][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out) begin
+    209             1                       2632                                             end else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    198                                       50     Count coming in to CASE
+    199             1                          1                                                 4'd1: event_out_0 <= 1;
+    200             1                          4                                                 4'd2: event_out_1 <= 1;
+    201             1                          2                                                 4'd3: event_out_2 <= 1;
+    202             1                          3                                                 4'd4: event_out_3 <= 1;
+    203             1                          4                                                 4'd5: event_out_4 <= 1;
+    204             1                          7                                                 4'd6: event_out_5 <= 1;
+    205             1                          9                                                 4'd7: event_out_6 <= 1;
+    206             1                         11                                                 4'd8: event_out_7 <= 1;
+    207             1                          9                                                 4'd9: event_out_8 <= 1;
+                                         ***0***     All False Count
+Branch totals: 9 hits of 10 branches = 90.00%
+
+------------------------------------IF Branch------------------------------------
+    210                                     2632     Count coming in to IF
+    210             1                         66                                                 if ( fifo[0][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out) begin
+                                            2566     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    212                                       66     Count coming in to CASE
+    213             1                         13                                                     4'd1: event_out_0 <= 1;
+    214             1                          8                                                     4'd2: event_out_1 <= 1;
+    215             1                          8                                                     4'd3: event_out_2 <= 1;
+    216             1                          6                                                     4'd4: event_out_3 <= 1;
+    217             1                          8                                                     4'd5: event_out_4 <= 1;
+    218             1                          7                                                     4'd6: event_out_5 <= 1;
+    219             1                          7                                                     4'd7: event_out_6 <= 1;
+    220             1                          5                                                     4'd8: event_out_7 <= 1;
+    221             1                          4                                                     4'd9: event_out_8 <= 1;
+                                         ***0***     All False Count
+Branch totals: 9 hits of 10 branches = 90.00%
+
+------------------------------------IF Branch------------------------------------
+    231                                     2736     Count coming in to IF
+    231             1                       2734                         if (ready_dly)
+                                               2     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    233                                     2734     Count coming in to IF
+    233             1                       1404                             if ( event_in_0|evt_flag0 )
+                                            1330     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    246                                     2734     Count coming in to IF
+    246             1                       1302                             if ( event_in_1|evt_flag1 )
+                                            1432     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    260                                     2734     Count coming in to IF
+    260             1                       1157                             if ( event_in_2|evt_flag2 )
+                                            1577     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    275                                     2734     Count coming in to IF
+    275             1                        965                             if ( event_in_3|evt_flag3 )
+                                            1769     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    291                                     2734     Count coming in to IF
+    291             1                        810                             if ( event_in_4|evt_flag4 )
+                                            1924     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    308                                     2734     Count coming in to IF
+    308             1                        681                             if ( event_in_5|evt_flag5 ) begin
+                                            2053     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    325                                     2734     Count coming in to IF
+    325             1                        544                             if ( event_in_6|evt_flag6 ) begin
+                                            2190     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    343                                     2734     Count coming in to IF
+    343             1                        406                             if ( event_in_7|evt_flag7 ) begin
+                                            2328     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    362                                     2734     Count coming in to IF
+    362             1                        268                             if(event_in_8) begin
+                                            2466     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      52        51         1    98.07%
+
+================================Condition Details================================
+
+Condition Coverage for file ../../../src/imports/arbitor/arbitor.v --
+
+----------------Focused Condition View-------------------
+Line       98 Item    1  (((~iotx_tvalid & fifo[8][4]) & no_evt) & no_evt_out)
+Condition totals: 3 of 4 input terms covered = 75.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  iotx_tvalid         Y
+   fifo[8][4]         Y
+       no_evt         Y
+   no_evt_out         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  iotx_tvalid_0         (no_evt_out && no_evt && fifo[8][4])
+  Row   2:          1  iotx_tvalid_1         (no_evt_out && no_evt && fifo[8][4])
+  Row   3:          1  fifo[8][4]_0          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   4:          1  fifo[8][4]_1          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   5:          1  no_evt_0              (no_evt_out && (~iotx_tvalid & fifo[8][4]))
+  Row   6:          1  no_evt_1              (no_evt_out && (~iotx_tvalid & fifo[8][4]))
+  Row   7:    ***0***  no_evt_out_0          ((~iotx_tvalid & fifo[8][4]) & no_evt)
+  Row   8:          1  no_evt_out_1          ((~iotx_tvalid & fifo[8][4]) & no_evt)
+
+----------------Focused Condition View-------------------
+Line       112 Item    1  (((~iotx_tvalid & fifo[7][4]) & no_evt) & no_evt_out)
+Condition totals: 4 of 4 input terms covered = 100.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  iotx_tvalid         Y
+   fifo[7][4]         Y
+       no_evt         Y
+   no_evt_out         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  iotx_tvalid_0         (no_evt_out && no_evt && fifo[7][4])
+  Row   2:          1  iotx_tvalid_1         (no_evt_out && no_evt && fifo[7][4])
+  Row   3:          1  fifo[7][4]_0          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   4:          1  fifo[7][4]_1          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   5:          1  no_evt_0              (no_evt_out && (~iotx_tvalid & fifo[7][4]))
+  Row   6:          1  no_evt_1              (no_evt_out && (~iotx_tvalid & fifo[7][4]))
+  Row   7:          1  no_evt_out_0          ((~iotx_tvalid & fifo[7][4]) & no_evt)
+  Row   8:          1  no_evt_out_1          ((~iotx_tvalid & fifo[7][4]) & no_evt)
+
+----------------Focused Condition View-------------------
+Line       126 Item    1  (((~iotx_tvalid & fifo[6][4]) & no_evt) & no_evt_out)
+Condition totals: 4 of 4 input terms covered = 100.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  iotx_tvalid         Y
+   fifo[6][4]         Y
+       no_evt         Y
+   no_evt_out         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  iotx_tvalid_0         (no_evt_out && no_evt && fifo[6][4])
+  Row   2:          1  iotx_tvalid_1         (no_evt_out && no_evt && fifo[6][4])
+  Row   3:          1  fifo[6][4]_0          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   4:          1  fifo[6][4]_1          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   5:          1  no_evt_0              (no_evt_out && (~iotx_tvalid & fifo[6][4]))
+  Row   6:          1  no_evt_1              (no_evt_out && (~iotx_tvalid & fifo[6][4]))
+  Row   7:          1  no_evt_out_0          ((~iotx_tvalid & fifo[6][4]) & no_evt)
+  Row   8:          1  no_evt_out_1          ((~iotx_tvalid & fifo[6][4]) & no_evt)
+
+----------------Focused Condition View-------------------
+Line       140 Item    1  (((~iotx_tvalid & fifo[5][4]) & no_evt) & no_evt_out)
+Condition totals: 4 of 4 input terms covered = 100.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  iotx_tvalid         Y
+   fifo[5][4]         Y
+       no_evt         Y
+   no_evt_out         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  iotx_tvalid_0         (no_evt_out && no_evt && fifo[5][4])
+  Row   2:          1  iotx_tvalid_1         (no_evt_out && no_evt && fifo[5][4])
+  Row   3:          1  fifo[5][4]_0          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   4:          1  fifo[5][4]_1          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   5:          1  no_evt_0              (no_evt_out && (~iotx_tvalid & fifo[5][4]))
+  Row   6:          1  no_evt_1              (no_evt_out && (~iotx_tvalid & fifo[5][4]))
+  Row   7:          1  no_evt_out_0          ((~iotx_tvalid & fifo[5][4]) & no_evt)
+  Row   8:          1  no_evt_out_1          ((~iotx_tvalid & fifo[5][4]) & no_evt)
+
+----------------Focused Condition View-------------------
+Line       154 Item    1  (((~iotx_tvalid & fifo[4][4]) & no_evt) & no_evt_out)
+Condition totals: 4 of 4 input terms covered = 100.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  iotx_tvalid         Y
+   fifo[4][4]         Y
+       no_evt         Y
+   no_evt_out         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  iotx_tvalid_0         (no_evt_out && no_evt && fifo[4][4])
+  Row   2:          1  iotx_tvalid_1         (no_evt_out && no_evt && fifo[4][4])
+  Row   3:          1  fifo[4][4]_0          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   4:          1  fifo[4][4]_1          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   5:          1  no_evt_0              (no_evt_out && (~iotx_tvalid & fifo[4][4]))
+  Row   6:          1  no_evt_1              (no_evt_out && (~iotx_tvalid & fifo[4][4]))
+  Row   7:          1  no_evt_out_0          ((~iotx_tvalid & fifo[4][4]) & no_evt)
+  Row   8:          1  no_evt_out_1          ((~iotx_tvalid & fifo[4][4]) & no_evt)
+
+----------------Focused Condition View-------------------
+Line       168 Item    1  (((~iotx_tvalid & fifo[3][4]) & no_evt) & no_evt_out)
+Condition totals: 4 of 4 input terms covered = 100.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  iotx_tvalid         Y
+   fifo[3][4]         Y
+       no_evt         Y
+   no_evt_out         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  iotx_tvalid_0         (no_evt_out && no_evt && fifo[3][4])
+  Row   2:          1  iotx_tvalid_1         (no_evt_out && no_evt && fifo[3][4])
+  Row   3:          1  fifo[3][4]_0          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   4:          1  fifo[3][4]_1          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   5:          1  no_evt_0              (no_evt_out && (~iotx_tvalid & fifo[3][4]))
+  Row   6:          1  no_evt_1              (no_evt_out && (~iotx_tvalid & fifo[3][4]))
+  Row   7:          1  no_evt_out_0          ((~iotx_tvalid & fifo[3][4]) & no_evt)
+  Row   8:          1  no_evt_out_1          ((~iotx_tvalid & fifo[3][4]) & no_evt)
+
+----------------Focused Condition View-------------------
+Line       182 Item    1  (((~iotx_tvalid & fifo[2][4]) & no_evt) & no_evt_out)
+Condition totals: 4 of 4 input terms covered = 100.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  iotx_tvalid         Y
+   fifo[2][4]         Y
+       no_evt         Y
+   no_evt_out         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  iotx_tvalid_0         (no_evt_out && no_evt && fifo[2][4])
+  Row   2:          1  iotx_tvalid_1         (no_evt_out && no_evt && fifo[2][4])
+  Row   3:          1  fifo[2][4]_0          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   4:          1  fifo[2][4]_1          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   5:          1  no_evt_0              (no_evt_out && (~iotx_tvalid & fifo[2][4]))
+  Row   6:          1  no_evt_1              (no_evt_out && (~iotx_tvalid & fifo[2][4]))
+  Row   7:          1  no_evt_out_0          ((~iotx_tvalid & fifo[2][4]) & no_evt)
+  Row   8:          1  no_evt_out_1          ((~iotx_tvalid & fifo[2][4]) & no_evt)
+
+----------------Focused Condition View-------------------
+Line       196 Item    1  (((~iotx_tvalid & fifo[1][4]) & no_evt) & no_evt_out)
+Condition totals: 4 of 4 input terms covered = 100.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  iotx_tvalid         Y
+   fifo[1][4]         Y
+       no_evt         Y
+   no_evt_out         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  iotx_tvalid_0         (no_evt_out && no_evt && fifo[1][4])
+  Row   2:          1  iotx_tvalid_1         (no_evt_out && no_evt && fifo[1][4])
+  Row   3:          1  fifo[1][4]_0          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   4:          1  fifo[1][4]_1          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   5:          1  no_evt_0              (no_evt_out && (~iotx_tvalid & fifo[1][4]))
+  Row   6:          1  no_evt_1              (no_evt_out && (~iotx_tvalid & fifo[1][4]))
+  Row   7:          1  no_evt_out_0          ((~iotx_tvalid & fifo[1][4]) & no_evt)
+  Row   8:          1  no_evt_out_1          ((~iotx_tvalid & fifo[1][4]) & no_evt)
+
+----------------Focused Condition View-------------------
+Line       210 Item    1  (((~iotx_tvalid & fifo[0][4]) & no_evt) & no_evt_out)
+Condition totals: 4 of 4 input terms covered = 100.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  iotx_tvalid         Y
+   fifo[0][4]         Y
+       no_evt         Y
+   no_evt_out         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  iotx_tvalid_0         (no_evt_out && no_evt && fifo[0][4])
+  Row   2:          1  iotx_tvalid_1         (no_evt_out && no_evt && fifo[0][4])
+  Row   3:          1  fifo[0][4]_0          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   4:          1  fifo[0][4]_1          (no_evt_out && no_evt && ~iotx_tvalid)
+  Row   5:          1  no_evt_0              (no_evt_out && (~iotx_tvalid & fifo[0][4]))
+  Row   6:          1  no_evt_1              (no_evt_out && (~iotx_tvalid & fifo[0][4]))
+  Row   7:          1  no_evt_out_0          ((~iotx_tvalid & fifo[0][4]) & no_evt)
+  Row   8:          1  no_evt_out_1          ((~iotx_tvalid & fifo[0][4]) & no_evt)
+
+----------------Focused Condition View-------------------
+Line       233 Item    1  (event_in_0 | evt_flag0)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_0         Y
+   evt_flag0         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_0_0          ~evt_flag0                    
+  Row   2:          1  event_in_0_1          ~evt_flag0                    
+  Row   3:          1  evt_flag0_0           ~event_in_0                   
+  Row   4:          1  evt_flag0_1           ~event_in_0                   
+
+----------------Focused Condition View-------------------
+Line       246 Item    1  (event_in_1 | evt_flag1)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_1         Y
+   evt_flag1         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_1_0          ~evt_flag1                    
+  Row   2:          1  event_in_1_1          ~evt_flag1                    
+  Row   3:          1  evt_flag1_0           ~event_in_1                   
+  Row   4:          1  evt_flag1_1           ~event_in_1                   
+
+----------------Focused Condition View-------------------
+Line       260 Item    1  (event_in_2 | evt_flag2)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_2         Y
+   evt_flag2         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_2_0          ~evt_flag2                    
+  Row   2:          1  event_in_2_1          ~evt_flag2                    
+  Row   3:          1  evt_flag2_0           ~event_in_2                   
+  Row   4:          1  evt_flag2_1           ~event_in_2                   
+
+----------------Focused Condition View-------------------
+Line       275 Item    1  (event_in_3 | evt_flag3)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_3         Y
+   evt_flag3         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_3_0          ~evt_flag3                    
+  Row   2:          1  event_in_3_1          ~evt_flag3                    
+  Row   3:          1  evt_flag3_0           ~event_in_3                   
+  Row   4:          1  evt_flag3_1           ~event_in_3                   
+
+----------------Focused Condition View-------------------
+Line       291 Item    1  (event_in_4 | evt_flag4)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_4         Y
+   evt_flag4         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_4_0          ~evt_flag4                    
+  Row   2:          1  event_in_4_1          ~evt_flag4                    
+  Row   3:          1  evt_flag4_0           ~event_in_4                   
+  Row   4:          1  evt_flag4_1           ~event_in_4                   
+
+----------------Focused Condition View-------------------
+Line       308 Item    1  (event_in_5 | evt_flag5)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_5         Y
+   evt_flag5         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_5_0          ~evt_flag5                    
+  Row   2:          1  event_in_5_1          ~evt_flag5                    
+  Row   3:          1  evt_flag5_0           ~event_in_5                   
+  Row   4:          1  evt_flag5_1           ~event_in_5                   
+
+----------------Focused Condition View-------------------
+Line       325 Item    1  (event_in_6 | evt_flag6)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_6         Y
+   evt_flag6         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_6_0          ~evt_flag6                    
+  Row   2:          1  event_in_6_1          ~evt_flag6                    
+  Row   3:          1  evt_flag6_0           ~event_in_6                   
+  Row   4:          1  evt_flag6_1           ~event_in_6                   
+
+----------------Focused Condition View-------------------
+Line       343 Item    1  (event_in_7 | evt_flag7)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_7         Y
+   evt_flag7         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_7_0          ~evt_flag7                    
+  Row   2:          1  event_in_7_1          ~evt_flag7                    
+  Row   3:          1  evt_flag7_0           ~event_in_7                   
+  Row   4:          1  evt_flag7_1           ~event_in_7                   
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Expressions                     97        93         4    95.87%
+
+================================Expression Details================================
+
+Expression Coverage for file ../../../src/imports/arbitor/arbitor.v --
+
+----------------Focused Expression View-----------------
+Line       41 Item    1  ((((((((event_out_8 | event_out_7) | event_out_6) | event_out_5) | event_out_4) | event_out_3) | event_out_2) | event_out_1) ~| event_out_0)
+Expression totals: 9 of 9 input terms covered = 100.00%
+
+   Input Term   Covered  Reason for no coverage   Hint
+  -----------  --------  -----------------------  --------------
+  event_out_8         Y
+  event_out_7         Y
+  event_out_6         Y
+  event_out_5         Y
+  event_out_4         Y
+  event_out_3         Y
+  event_out_2         Y
+  event_out_1         Y
+  event_out_0         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_out_8_0         (~event_out_0 && ~event_out_1 && ~event_out_2 && ~event_out_3 && ~event_out_4 && ~event_out_5 && ~event_out_6 && ~event_out_7)
+  Row   2:          1  event_out_8_1         (~event_out_0 && ~event_out_1 && ~event_out_2 && ~event_out_3 && ~event_out_4 && ~event_out_5 && ~event_out_6 && ~event_out_7)
+  Row   3:          1  event_out_7_0         (~event_out_0 && ~event_out_1 && ~event_out_2 && ~event_out_3 && ~event_out_4 && ~event_out_5 && ~event_out_6 && ~event_out_8)
+  Row   4:          1  event_out_7_1         (~event_out_0 && ~event_out_1 && ~event_out_2 && ~event_out_3 && ~event_out_4 && ~event_out_5 && ~event_out_6 && ~event_out_8)
+  Row   5:          1  event_out_6_0         (~event_out_0 && ~event_out_1 && ~event_out_2 && ~event_out_3 && ~event_out_4 && ~event_out_5 && ~(event_out_8 | event_out_7))
+  Row   6:          1  event_out_6_1         (~event_out_0 && ~event_out_1 && ~event_out_2 && ~event_out_3 && ~event_out_4 && ~event_out_5 && ~(event_out_8 | event_out_7))
+  Row   7:          1  event_out_5_0         (~event_out_0 && ~event_out_1 && ~event_out_2 && ~event_out_3 && ~event_out_4 && ~((event_out_8 | event_out_7) | event_out_6))
+  Row   8:          1  event_out_5_1         (~event_out_0 && ~event_out_1 && ~event_out_2 && ~event_out_3 && ~event_out_4 && ~((event_out_8 | event_out_7) | event_out_6))
+  Row   9:          1  event_out_4_0         (~event_out_0 && ~event_out_1 && ~event_out_2 && ~event_out_3 && ~(((event_out_8 | event_out_7) | event_out_6) | event_out_5))
+ Row   10:          1  event_out_4_1         (~event_out_0 && ~event_out_1 && ~event_out_2 && ~event_out_3 && ~(((event_out_8 | event_out_7) | event_out_6) | event_out_5))
+ Row   11:          1  event_out_3_0         (~event_out_0 && ~event_out_1 && ~event_out_2 && ~((((event_out_8 | event_out_7) | event_out_6) | event_out_5) | event_out_4))
+ Row   12:          1  event_out_3_1         (~event_out_0 && ~event_out_1 && ~event_out_2 && ~((((event_out_8 | event_out_7) | event_out_6) | event_out_5) | event_out_4))
+ Row   13:          1  event_out_2_0         (~event_out_0 && ~event_out_1 && ~(((((event_out_8 | event_out_7) | event_out_6) | event_out_5) | event_out_4) | event_out_3))
+ Row   14:          1  event_out_2_1         (~event_out_0 && ~event_out_1 && ~(((((event_out_8 | event_out_7) | event_out_6) | event_out_5) | event_out_4) | event_out_3))
+ Row   15:          1  event_out_1_0         (~event_out_0 && ~((((((event_out_8 | event_out_7) | event_out_6) | event_out_5) | event_out_4) | event_out_3) | event_out_2))
+ Row   16:          1  event_out_1_1         (~event_out_0 && ~((((((event_out_8 | event_out_7) | event_out_6) | event_out_5) | event_out_4) | event_out_3) | event_out_2))
+ Row   17:          1  event_out_0_0         ~(((((((event_out_8 | event_out_7) | event_out_6) | event_out_5) | event_out_4) | event_out_3) | event_out_2) | event_out_1)
+ Row   18:          1  event_out_0_1         ~(((((((event_out_8 | event_out_7) | event_out_6) | event_out_5) | event_out_4) | event_out_3) | event_out_2) | event_out_1)
+
+----------------Focused Expression View-----------------
+Line       42 Item    1  (((((((((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7) | evt_flag6) | evt_flag4) | evt_flag3) | evt_flag2) | evt_flag1) ~| evt_flag0)
+Expression totals: 16 of 16 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_8         Y
+  event_in_7         Y
+  event_in_6         Y
+  event_in_5         Y
+  event_in_4         Y
+  event_in_3         Y
+  event_in_2         Y
+  event_in_1         Y
+  event_in_0         Y
+   evt_flag7         Y
+   evt_flag6         Y
+   evt_flag4         Y
+   evt_flag3         Y
+   evt_flag2         Y
+   evt_flag1         Y
+   evt_flag0         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_8_0          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~event_in_2 && ~event_in_3 && ~event_in_4 && ~event_in_5 && ~event_in_6 && ~event_in_7)
+  Row   2:          1  event_in_8_1          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~event_in_2 && ~event_in_3 && ~event_in_4 && ~event_in_5 && ~event_in_6 && ~event_in_7)
+  Row   3:          1  event_in_7_0          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~event_in_2 && ~event_in_3 && ~event_in_4 && ~event_in_5 && ~event_in_6 && ~event_in_8)
+  Row   4:          1  event_in_7_1          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~event_in_2 && ~event_in_3 && ~event_in_4 && ~event_in_5 && ~event_in_6 && ~event_in_8)
+  Row   5:          1  event_in_6_0          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~event_in_2 && ~event_in_3 && ~event_in_4 && ~event_in_5 && ~(event_in_8 | event_in_7))
+  Row   6:          1  event_in_6_1          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~event_in_2 && ~event_in_3 && ~event_in_4 && ~event_in_5 && ~(event_in_8 | event_in_7))
+  Row   7:          1  event_in_5_0          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~event_in_2 && ~event_in_3 && ~event_in_4 && ~((event_in_8 | event_in_7) | event_in_6))
+  Row   8:          1  event_in_5_1          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~event_in_2 && ~event_in_3 && ~event_in_4 && ~((event_in_8 | event_in_7) | event_in_6))
+  Row   9:          1  event_in_4_0          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~event_in_2 && ~event_in_3 && ~(((event_in_8 | event_in_7) | event_in_6) | event_in_5))
+ Row   10:          1  event_in_4_1          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~event_in_2 && ~event_in_3 && ~(((event_in_8 | event_in_7) | event_in_6) | event_in_5))
+ Row   11:          1  event_in_3_0          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~event_in_2 && ~((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4))
+ Row   12:          1  event_in_3_1          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~event_in_2 && ~((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4))
+ Row   13:          1  event_in_2_0          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~(((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3))
+ Row   14:          1  event_in_2_1          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~event_in_1 && ~(((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3))
+ Row   15:          1  event_in_1_0          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2))
+ Row   16:          1  event_in_1_1          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~event_in_0 && ~((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2))
+ Row   17:          1  event_in_0_0          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~(((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1))
+ Row   18:          1  event_in_0_1          (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~evt_flag7 && ~(((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1))
+ Row   19:          1  evt_flag7_0           (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0))
+ Row   20:          1  evt_flag7_1           (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~evt_flag6 && ~((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0))
+ Row   21:          1  evt_flag6_0           (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~(((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7))
+ Row   22:          1  evt_flag6_1           (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~evt_flag4 && ~(((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7))
+ Row   23:          1  evt_flag4_0           (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~((((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7) | evt_flag6))
+ Row   24:          1  evt_flag4_1           (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~evt_flag3 && ~((((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7) | evt_flag6))
+ Row   25:          1  evt_flag3_0           (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~(((((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7) | evt_flag6) | evt_flag4))
+ Row   26:          1  evt_flag3_1           (~evt_flag0 && ~evt_flag1 && ~evt_flag2 && ~(((((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7) | evt_flag6) | evt_flag4))
+ Row   27:          1  evt_flag2_0           (~evt_flag0 && ~evt_flag1 && ~((((((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7) | evt_flag6) | evt_flag4) | evt_flag3))
+ Row   28:          1  evt_flag2_1           (~evt_flag0 && ~evt_flag1 && ~((((((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7) | evt_flag6) | evt_flag4) | evt_flag3))
+ Row   29:          1  evt_flag1_0           (~evt_flag0 && ~(((((((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7) | evt_flag6) | evt_flag4) | evt_flag3) | evt_flag2))
+ Row   30:          1  evt_flag1_1           (~evt_flag0 && ~(((((((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7) | evt_flag6) | evt_flag4) | evt_flag3) | evt_flag2))
+ Row   31:          1  evt_flag0_0           ~((((((((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7) | evt_flag6) | evt_flag4) | evt_flag3) | evt_flag2) | evt_flag1)
+ Row   32:          1  evt_flag0_1           ~((((((((((((((event_in_8 | event_in_7) | event_in_6) | event_in_5) | event_in_4) | event_in_3) | event_in_2) | event_in_1) | event_in_0) | evt_flag7) | evt_flag6) | evt_flag4) | evt_flag3) | evt_flag2) | evt_flag1)
+
+----------------Focused Expression View-----------------
+Line       248 Item    1  (event_in_0 | evt_flag0)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_0         Y
+   evt_flag0         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_0_0          ~evt_flag0                    
+  Row   2:          1  event_in_0_1          ~evt_flag0                    
+  Row   3:          1  evt_flag0_0           ~event_in_0                   
+  Row   4:          1  evt_flag0_1           ~event_in_0                   
+
+----------------Focused Expression View-----------------
+Line       262 Item    1  (event_in_1 | evt_flag1)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_1         Y
+   evt_flag1         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_1_0          ~evt_flag1                    
+  Row   2:          1  event_in_1_1          ~evt_flag1                    
+  Row   3:          1  evt_flag1_0           ~event_in_1                   
+  Row   4:          1  evt_flag1_1           ~event_in_1                   
+
+----------------Focused Expression View-----------------
+Line       263 Item    1  (event_in_0 | evt_flag0)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_0         Y
+   evt_flag0         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_0_0          ~evt_flag0                    
+  Row   2:          1  event_in_0_1          ~evt_flag0                    
+  Row   3:          1  evt_flag0_0           ~event_in_0                   
+  Row   4:          1  evt_flag0_1           ~event_in_0                   
+
+----------------Focused Expression View-----------------
+Line       277 Item    1  (event_in_2 | evt_flag2)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_2         Y
+   evt_flag2         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_2_0          ~evt_flag2                    
+  Row   2:          1  event_in_2_1          ~evt_flag2                    
+  Row   3:          1  evt_flag2_0           ~event_in_2                   
+  Row   4:          1  evt_flag2_1           ~event_in_2                   
+
+----------------Focused Expression View-----------------
+Line       278 Item    1  (event_in_1 | evt_flag1)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_1         Y
+   evt_flag1         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_1_0          ~evt_flag1                    
+  Row   2:          1  event_in_1_1          ~evt_flag1                    
+  Row   3:          1  evt_flag1_0           ~event_in_1                   
+  Row   4:          1  evt_flag1_1           ~event_in_1                   
+
+----------------Focused Expression View-----------------
+Line       279 Item    1  (event_in_0 | evt_flag0)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_0         Y
+   evt_flag0         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_0_0          ~evt_flag0                    
+  Row   2:          1  event_in_0_1          ~evt_flag0                    
+  Row   3:          1  evt_flag0_0           ~event_in_0                   
+  Row   4:          1  evt_flag0_1           ~event_in_0                   
+
+----------------Focused Expression View-----------------
+Line       293 Item    1  (event_in_3 | evt_flag3)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_3         Y
+   evt_flag3         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_3_0          ~evt_flag3                    
+  Row   2:          1  event_in_3_1          ~evt_flag3                    
+  Row   3:          1  evt_flag3_0           ~event_in_3                   
+  Row   4:          1  evt_flag3_1           ~event_in_3                   
+
+----------------Focused Expression View-----------------
+Line       294 Item    1  (event_in_2 | evt_flag2)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_2         Y
+   evt_flag2         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_2_0          ~evt_flag2                    
+  Row   2:          1  event_in_2_1          ~evt_flag2                    
+  Row   3:          1  evt_flag2_0           ~event_in_2                   
+  Row   4:          1  evt_flag2_1           ~event_in_2                   
+
+----------------Focused Expression View-----------------
+Line       295 Item    1  (event_in_1 | evt_flag1)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_1         Y
+   evt_flag1         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_1_0          ~evt_flag1                    
+  Row   2:          1  event_in_1_1          ~evt_flag1                    
+  Row   3:          1  evt_flag1_0           ~event_in_1                   
+  Row   4:          1  evt_flag1_1           ~event_in_1                   
+
+----------------Focused Expression View-----------------
+Line       296 Item    1  (event_in_0 | evt_flag0)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_0         Y
+   evt_flag0         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_0_0          ~evt_flag0                    
+  Row   2:          1  event_in_0_1          ~evt_flag0                    
+  Row   3:          1  evt_flag0_0           ~event_in_0                   
+  Row   4:          1  evt_flag0_1           ~event_in_0                   
+
+----------------Focused Expression View-----------------
+Line       309 Item    1  (event_in_4 | evt_flag4)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_4         Y
+   evt_flag4         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_4_0          ~evt_flag4                    
+  Row   2:          1  event_in_4_1          ~evt_flag4                    
+  Row   3:          1  evt_flag4_0           ~event_in_4                   
+  Row   4:          1  evt_flag4_1           ~event_in_4                   
+
+----------------Focused Expression View-----------------
+Line       310 Item    1  (event_in_3 | evt_flag3)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_3         Y
+   evt_flag3         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_3_0          ~evt_flag3                    
+  Row   2:          1  event_in_3_1          ~evt_flag3                    
+  Row   3:          1  evt_flag3_0           ~event_in_3                   
+  Row   4:          1  evt_flag3_1           ~event_in_3                   
+
+----------------Focused Expression View-----------------
+Line       311 Item    1  (event_in_2 | evt_flag2)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_2         Y
+   evt_flag2         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_2_0          ~evt_flag2                    
+  Row   2:          1  event_in_2_1          ~evt_flag2                    
+  Row   3:          1  evt_flag2_0           ~event_in_2                   
+  Row   4:          1  evt_flag2_1           ~event_in_2                   
+
+----------------Focused Expression View-----------------
+Line       312 Item    1  (event_in_1 | evt_flag1)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_1         Y
+   evt_flag1         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_1_0          ~evt_flag1                    
+  Row   2:          1  event_in_1_1          ~evt_flag1                    
+  Row   3:          1  evt_flag1_0           ~event_in_1                   
+  Row   4:          1  evt_flag1_1           ~event_in_1                   
+
+----------------Focused Expression View-----------------
+Line       313 Item    1  (event_in_0 | evt_flag0)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_0         Y
+   evt_flag0         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_0_0          ~evt_flag0                    
+  Row   2:          1  event_in_0_1          ~evt_flag0                    
+  Row   3:          1  evt_flag0_0           ~event_in_0                   
+  Row   4:          1  evt_flag0_1           ~event_in_0                   
+
+----------------Focused Expression View-----------------
+Line       326 Item    1  (event_in_5 | evt_flag5)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_5         Y
+   evt_flag5         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_5_0          ~evt_flag5                    
+  Row   2:          1  event_in_5_1          ~evt_flag5                    
+  Row   3:          1  evt_flag5_0           ~event_in_5                   
+  Row   4:          1  evt_flag5_1           ~event_in_5                   
+
+----------------Focused Expression View-----------------
+Line       327 Item    1  (event_in_4 | evt_flag4)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_4         Y
+   evt_flag4         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_4_0          ~evt_flag4                    
+  Row   2:          1  event_in_4_1          ~evt_flag4                    
+  Row   3:          1  evt_flag4_0           ~event_in_4                   
+  Row   4:          1  evt_flag4_1           ~event_in_4                   
+
+----------------Focused Expression View-----------------
+Line       328 Item    1  (event_in_3 | evt_flag3)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_3         Y
+   evt_flag3         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_3_0          ~evt_flag3                    
+  Row   2:          1  event_in_3_1          ~evt_flag3                    
+  Row   3:          1  evt_flag3_0           ~event_in_3                   
+  Row   4:          1  evt_flag3_1           ~event_in_3                   
+
+----------------Focused Expression View-----------------
+Line       329 Item    1  (event_in_2 | evt_flag2)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_2         Y
+   evt_flag2         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_2_0          ~evt_flag2                    
+  Row   2:          1  event_in_2_1          ~evt_flag2                    
+  Row   3:          1  evt_flag2_0           ~event_in_2                   
+  Row   4:          1  evt_flag2_1           ~event_in_2                   
+
+----------------Focused Expression View-----------------
+Line       330 Item    1  (event_in_1 | evt_flag1)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_1         Y
+   evt_flag1         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_1_0          ~evt_flag1                    
+  Row   2:          1  event_in_1_1          ~evt_flag1                    
+  Row   3:          1  evt_flag1_0           ~event_in_1                   
+  Row   4:          1  evt_flag1_1           ~event_in_1                   
+
+----------------Focused Expression View-----------------
+Line       331 Item    1  (event_in_0 | evt_flag0)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_0         Y
+   evt_flag0         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_0_0          ~evt_flag0                    
+  Row   2:          1  event_in_0_1          ~evt_flag0                    
+  Row   3:          1  evt_flag0_0           ~event_in_0                   
+  Row   4:          1  evt_flag0_1           ~event_in_0                   
+
+----------------Focused Expression View-----------------
+Line       344 Item    1  (event_in_6 | evt_flag6)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_6         Y
+   evt_flag6         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_6_0          ~evt_flag6                    
+  Row   2:          1  event_in_6_1          ~evt_flag6                    
+  Row   3:          1  evt_flag6_0           ~event_in_6                   
+  Row   4:          1  evt_flag6_1           ~event_in_6                   
+
+----------------Focused Expression View-----------------
+Line       345 Item    1  (event_in_5 | evt_flag5)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_5         Y
+   evt_flag5         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_5_0          ~evt_flag5                    
+  Row   2:          1  event_in_5_1          ~evt_flag5                    
+  Row   3:          1  evt_flag5_0           ~event_in_5                   
+  Row   4:          1  evt_flag5_1           ~event_in_5                   
+
+----------------Focused Expression View-----------------
+Line       346 Item    1  (event_in_4 | evt_flag4)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_4         Y
+   evt_flag4         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_4_0          ~evt_flag4                    
+  Row   2:          1  event_in_4_1          ~evt_flag4                    
+  Row   3:          1  evt_flag4_0           ~event_in_4                   
+  Row   4:          1  evt_flag4_1           ~event_in_4                   
+
+----------------Focused Expression View-----------------
+Line       347 Item    1  (event_in_3 | evt_flag3)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_3         Y
+   evt_flag3         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_3_0          ~evt_flag3                    
+  Row   2:          1  event_in_3_1          ~evt_flag3                    
+  Row   3:          1  evt_flag3_0           ~event_in_3                   
+  Row   4:          1  evt_flag3_1           ~event_in_3                   
+
+----------------Focused Expression View-----------------
+Line       348 Item    1  (event_in_2 | evt_flag2)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_2         Y
+   evt_flag2         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_2_0          ~evt_flag2                    
+  Row   2:          1  event_in_2_1          ~evt_flag2                    
+  Row   3:          1  evt_flag2_0           ~event_in_2                   
+  Row   4:          1  evt_flag2_1           ~event_in_2                   
+
+----------------Focused Expression View-----------------
+Line       349 Item    1  (event_in_1 | evt_flag1)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_1         Y
+   evt_flag1         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_1_0          ~evt_flag1                    
+  Row   2:          1  event_in_1_1          ~evt_flag1                    
+  Row   3:          1  evt_flag1_0           ~event_in_1                   
+  Row   4:          1  evt_flag1_1           ~event_in_1                   
+
+----------------Focused Expression View-----------------
+Line       350 Item    1  (event_in_0 | evt_flag0)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_0         Y
+   evt_flag0         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_0_0          ~evt_flag0                    
+  Row   2:          1  event_in_0_1          ~evt_flag0                    
+  Row   3:          1  evt_flag0_0           ~event_in_0                   
+  Row   4:          1  evt_flag0_1           ~event_in_0                   
+
+----------------Focused Expression View-----------------
+Line       363 Item    1  (event_in_7 | evt_flag7)
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_7         Y
+   evt_flag7         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_7_0          ~evt_flag7                    
+  Row   2:          1  event_in_7_1          ~evt_flag7                    
+  Row   3:          1  evt_flag7_0           ~event_in_7                   
+  Row   4:    ***0***  evt_flag7_1           ~event_in_7                   
+
+----------------Focused Expression View-----------------
+Line       364 Item    1  (event_in_6 | evt_flag6)
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_6         Y
+   evt_flag6         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_6_0          ~evt_flag6                    
+  Row   2:          1  event_in_6_1          ~evt_flag6                    
+  Row   3:          1  evt_flag6_0           ~event_in_6                   
+  Row   4:    ***0***  evt_flag6_1           ~event_in_6                   
+
+----------------Focused Expression View-----------------
+Line       365 Item    1  (event_in_5 | evt_flag5)
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_5         Y
+   evt_flag5         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_5_0          ~evt_flag5                    
+  Row   2:          1  event_in_5_1          ~evt_flag5                    
+  Row   3:          1  evt_flag5_0           ~event_in_5                   
+  Row   4:    ***0***  evt_flag5_1           ~event_in_5                   
+
+----------------Focused Expression View-----------------
+Line       366 Item    1  (event_in_4 | evt_flag4)
+Expression totals: 1 of 2 input terms covered = 50.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_4         Y
+   evt_flag4         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_4_0          ~evt_flag4                    
+  Row   2:          1  event_in_4_1          ~evt_flag4                    
+  Row   3:          1  evt_flag4_0           ~event_in_4                   
+  Row   4:    ***0***  evt_flag4_1           ~event_in_4                   
+
+----------------Focused Expression View-----------------
+Line       367 Item    1  (event_in_3 | evt_flag3)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_3         Y
+   evt_flag3         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_3_0          ~evt_flag3                    
+  Row   2:          1  event_in_3_1          ~evt_flag3                    
+  Row   3:          1  evt_flag3_0           ~event_in_3                   
+  Row   4:          1  evt_flag3_1           ~event_in_3                   
+
+----------------Focused Expression View-----------------
+Line       368 Item    1  (event_in_2 | evt_flag2)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_2         Y
+   evt_flag2         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_2_0          ~evt_flag2                    
+  Row   2:          1  event_in_2_1          ~evt_flag2                    
+  Row   3:          1  evt_flag2_0           ~event_in_2                   
+  Row   4:          1  evt_flag2_1           ~event_in_2                   
+
+----------------Focused Expression View-----------------
+Line       369 Item    1  (event_in_1 | evt_flag1)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_1         Y
+   evt_flag1         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_1_0          ~evt_flag1                    
+  Row   2:          1  event_in_1_1          ~evt_flag1                    
+  Row   3:          1  evt_flag1_0           ~event_in_1                   
+  Row   4:          1  evt_flag1_1           ~event_in_1                   
+
+----------------Focused Expression View-----------------
+Line       370 Item    1  (event_in_0 | evt_flag0)
+Expression totals: 2 of 2 input terms covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+  event_in_0         Y
+   evt_flag0         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  event_in_0_0          ~evt_flag0                    
+  Row   2:          1  event_in_0_1          ~evt_flag0                    
+  Row   3:          1  evt_flag0_0           ~event_in_0                   
+  Row   4:          1  evt_flag0_1           ~event_in_0                   
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     259       238        21    91.89%
+
+================================Statement Details================================
+
+Statement Coverage for file ../../../src/imports/arbitor/arbitor.v --
+
+    1                                                `timescale 1 ps / 1 ps
+    2                                                module arbitor ( 
+    3                                                    input               clk                 , // 156.25M
+    4                                                    input               rst                 , // 
+    5                                                    input               link_initialized    , // 
+    6                                                    input               iotx_tvalid         , // 
+    7                                                    input               event_in_0          , // Lowest priority
+    8                                                    input               event_in_1          , // 
+    9                                                    input               event_in_2          , // 
+    10                                                   input               event_in_3          , // 
+    11                                                   input               event_in_4          , // 
+    12                                                   input               event_in_5          , // 
+    13                                                   input               event_in_6          , // 
+    14                                                   input               event_in_7          , // 
+    15                                                   input               event_in_8          , // Highest priority
+    16                                                   output reg          event_out_0         , // Lowest priority
+    17                                                   output reg          event_out_1         , // 
+    18                                                   output reg          event_out_2         , // 
+    19                                                   output reg          event_out_3         , // 
+    20                                                   output reg          event_out_4         , // 
+    21                                                   output reg          event_out_5         , // 
+    22                                                   output reg          event_out_6         , // 
+    23                                                   output reg          event_out_7         , // 
+    24                                                   output reg          event_out_8           // Highest priority
+    25                                               );
+    26                                                   reg         [04:00] fifo[8:0]           ;
+    27                                                   reg                 evt_flag0           ;
+    28                                                   reg                 evt_flag1           ;
+    29                                                   reg                 evt_flag2           ;
+    30                                                   reg                 evt_flag3           ;
+    31                                                   reg                 evt_flag4           ;
+    32                                                   reg                 evt_flag5           ;
+    33                                                   reg                 evt_flag6           ;
+    34                                                   reg                 evt_flag7           ;
+    35                                               
+    36                                                   wire                no_evt_out          ;
+    37                                                   wire                no_evt              ;
+    38                                                   reg         [30:00] cnt_1s              ;
+    39                                                   reg                 ready_dly           ;
+    40                                               
+    41              1                        943         assign no_evt_out = ~(event_out_8|event_out_7|event_out_6|event_out_5|event_out_4|event_out_3|event_out_2|event_out_1|event_out_0);
+    42              1                       3305         assign no_evt     = ~(event_in_8|event_in_7|event_in_6|event_in_5|event_in_4|event_in_3|event_in_2|event_in_1|event_in_0
+    43                                                                        |evt_flag7|evt_flag6|evt_flag4|evt_flag3|evt_flag2|evt_flag1|evt_flag0);
+    44                                                   
+    45              1                     781252         always @(posedge clk or posedge rst ) begin
+    46                                                       if ( rst ) begin
+    47              1                         19                 cnt_1s    <= 0;
+    48              1                         19                 ready_dly <= 0;
+    49                                                       end else begin
+    50              1                     781233                 cnt_1s <= 0;
+    51                                                           if(link_initialized) begin
+    52              1                     781189                     cnt_1s <= cnt_1s + 1;
+    53                                                               // if(cnt_1s == 156250000 - 1) begin
+    54              1                     781189                         ready_dly <= 1;
+    55                                                               // end
+    56                                                           end
+    57                                                       end
+    58                                                   end 
+    59                                               
+    60              1                       3041         always@(posedge clk or posedge rst ) begin
+    61                                                       if(rst ) begin
+    62              1                          4                 fifo[0]   <= 0;
+    63              1                          4                 fifo[1]   <= 0;
+    64              1                          4                 fifo[2]   <= 0;
+    65              1                          4                 fifo[3]   <= 0;
+    66              1                          4                 fifo[4]   <= 0;
+    67              1                          4                 fifo[5]   <= 0;
+    68              1                          4                 fifo[6]   <= 0;
+    69              1                          4                 fifo[7]   <= 0;
+    70              1                          4                 fifo[8]   <= 0;
+    71              1                          4                 evt_flag0 <= 0;
+    72              1                          4                 evt_flag1 <= 0;
+    73              1                          4                 evt_flag2 <= 0;
+    74              1                          4                 evt_flag3 <= 0;
+    75              1                          4                 evt_flag4 <= 0;
+    76              1                          4                 evt_flag5 <= 0;
+    77              1                          4                 evt_flag6 <= 0;
+    78              1                          4                 evt_flag7 <= 0;
+    79              1                          4                 event_out_0  <= 0;
+    80              1                          4                 event_out_1  <= 0;
+    81              1                          4                 event_out_2  <= 0;
+    82              1                          4                 event_out_3  <= 0;
+    83              1                          4                 event_out_4  <= 0;
+    84              1                          4                 event_out_5  <= 0;
+    85              1                          4                 event_out_6  <= 0;
+    86              1                          4                 event_out_7  <= 0;
+    87              1                          4                 event_out_8  <= 0;
+    88                                                       end else begin 
+    89              1                       3037                 event_out_0 <= 0;
+    90              1                       3037                 event_out_1 <= 0;
+    91              1                       3037                 event_out_2 <= 0;
+    92              1                       3037                 event_out_3 <= 0;
+    93              1                       3037                 event_out_4 <= 0;
+    94              1                       3037                 event_out_5 <= 0;
+    95              1                       3037                 event_out_6 <= 0;
+    96              1                       3037                 event_out_7 <= 0;
+    97              1                       3037                 event_out_8 <= 0;
+    98                                                           if(fifo[8][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out ) begin
+    99              1                        215                     fifo[8] <= 0;
+    100                                                              case ( fifo[8][3:0] )
+    101             1                         56                     4'd1: event_out_0 <= 1;
+    102             1                         36                     4'd2: event_out_1 <= 1;
+    103             1                         21                     4'd3: event_out_2 <= 1;
+    104             1                         13                     4'd4: event_out_3 <= 1;
+    105             1                         10                     4'd5: event_out_4 <= 1;
+    106             1                         11                     4'd6: event_out_5 <= 1;
+    107             1                         15                     4'd7: event_out_6 <= 1;
+    108             1                         21                     4'd8: event_out_7 <= 1;
+    109             1                         32                     4'd9: event_out_8 <= 1;
+    110                                                              endcase
+    111                                                          end else begin
+    112                                                              if(fifo[7][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out ) begin
+    113             1                         86                         fifo[7] <= 0;
+    114                                                                  case ( fifo[7][3:0] )
+    115             1                    ***0***                             4'd1: event_out_0 <= 1;
+    116             1                          5                             4'd2: event_out_1 <= 1;
+    117             1                         11                             4'd3: event_out_2 <= 1;
+    118             1                         15                             4'd4: event_out_3 <= 1;
+    119             1                         16                             4'd5: event_out_4 <= 1;
+    120             1                         15                             4'd6: event_out_5 <= 1;
+    121             1                         13                             4'd7: event_out_6 <= 1;
+    122             1                         10                             4'd8: event_out_7 <= 1;
+    123             1                          1                             4'd9: event_out_8 <= 1;
+    124                                                                  endcase
+    125                                                              end else begin
+    126                                                                  if ( fifo[6][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out ) begin
+    127             1                         16                             fifo[6] <= 0;
+    128                                                                      case ( fifo[6][3:0] )
+    129             1                          2                                 4'd1: event_out_0 <= 1;
+    130             1                          2                                 4'd2: event_out_1 <= 1;
+    131             1                          2                                 4'd3: event_out_2 <= 1;
+    132             1                          1                                 4'd4: event_out_3 <= 1;
+    133             1                          2                                 4'd5: event_out_4 <= 1;
+    134             1                          2                                 4'd6: event_out_5 <= 1;
+    135             1                          5                                 4'd7: event_out_6 <= 1;
+    136             1                    ***0***                                 4'd8: event_out_7 <= 1;
+    137             1                    ***0***                                 4'd9: event_out_8 <= 1;
+    138                                                                      endcase
+    139                                                                  end else begin 
+    140                                                                      if ( fifo[5][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out ) begin
+    141             1                          8                                 fifo[5] <= 0;
+    142                                                                          case ( fifo[5][3:0] )
+    143             1                    ***0***                                     4'd1: event_out_0 <= 1;
+    144             1                          1                                     4'd2: event_out_1 <= 1;
+    145             1                    ***0***                                     4'd3: event_out_2 <= 1;
+    146             1                          1                                     4'd4: event_out_3 <= 1;
+    147             1                    ***0***                                     4'd5: event_out_4 <= 1;
+    148             1                          4                                     4'd6: event_out_5 <= 1;
+    149             1                    ***0***                                     4'd7: event_out_6 <= 1;
+    150             1                    ***0***                                     4'd8: event_out_7 <= 1;
+    151             1                          2                                     4'd9: event_out_8 <= 1;
+    152                                                                          endcase
+    153                                                                      end else begin
+    154                                                                          if ( fifo[4][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out ) begin
+    155             1                          8                                     fifo[4] <= 0;
+    156                                                                              case ( fifo[4][3:0] )
+    157             1                          1                                     4'd1: event_out_0 <= 1;
+    158             1                    ***0***                                     4'd2: event_out_1 <= 1;
+    159             1                    ***0***                                     4'd3: event_out_2 <= 1;
+    160             1                    ***0***                                     4'd4: event_out_3 <= 1;
+    161             1                          5                                     4'd5: event_out_4 <= 1;
+    162             1                    ***0***                                     4'd6: event_out_5 <= 1;
+    163             1                    ***0***                                     4'd7: event_out_6 <= 1;
+    164             1                          1                                     4'd8: event_out_7 <= 1;
+    165             1                          1                                     4'd9: event_out_8 <= 1;
+    166                                                                              endcase
+    167                                                                          end else begin 
+    168                                                                              if ( fifo[3][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out ) begin
+    169             1                          9                                         fifo[3] <= 0;
+    170                                                                                  case ( fifo[3][3:0] )
+    171             1                    ***0***                                         4'd1: event_out_0 <= 1;
+    172             1                    ***0***                                         4'd2: event_out_1 <= 1;
+    173             1                    ***0***                                         4'd3: event_out_2 <= 1;
+    174             1                          5                                         4'd4: event_out_3 <= 1;
+    175             1                    ***0***                                         4'd5: event_out_4 <= 1;
+    176             1                          1                                         4'd6: event_out_5 <= 1;
+    177             1                          1                                         4'd7: event_out_6 <= 1;
+    178             1                          1                                         4'd8: event_out_7 <= 1;
+    179             1                          1                                         4'd9: event_out_8 <= 1;
+    180                                                                                  endcase
+    181                                                                              end else begin 
+    182                                                                                  if ( fifo[2][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out) begin
+    183             1                         13                                             fifo[2] <= 0;
+    184                                                                                      case ( fifo[2][3:0] )
+    185             1                    ***0***                                             4'd1: event_out_0 <= 1;
+    186             1                          1                                             4'd2: event_out_1 <= 1;
+    187             1                          5                                             4'd3: event_out_2 <= 1;
+    188             1                    ***0***                                             4'd4: event_out_3 <= 1;
+    189             1                    ***0***                                             4'd5: event_out_4 <= 1;
+    190             1                    ***0***                                             4'd6: event_out_5 <= 1;
+    191             1                          3                                             4'd7: event_out_6 <= 1;
+    192             1                          2                                             4'd8: event_out_7 <= 1;
+    193             1                          2                                             4'd9: event_out_8 <= 1;
+    194                                                                                      endcase
+    195                                                                                  end else begin 
+    196                                                                                      if ( fifo[1][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out) begin
+    197             1                         50                                                 fifo[1] <= 0;
+    198                                                                                          case ( fifo[1][3:0] )
+    199             1                          1                                                 4'd1: event_out_0 <= 1;
+    200             1                          4                                                 4'd2: event_out_1 <= 1;
+    201             1                          2                                                 4'd3: event_out_2 <= 1;
+    202             1                          3                                                 4'd4: event_out_3 <= 1;
+    203             1                          4                                                 4'd5: event_out_4 <= 1;
+    204             1                          7                                                 4'd6: event_out_5 <= 1;
+    205             1                          9                                                 4'd7: event_out_6 <= 1;
+    206             1                         11                                                 4'd8: event_out_7 <= 1;
+    207             1                          9                                                 4'd9: event_out_8 <= 1;
+    208                                                                                          endcase
+    209                                                                                      end else begin
+    210                                                                                          if ( fifo[0][4] == 1 & ~iotx_tvalid & no_evt & no_evt_out) begin
+    211             1                         66                                                     fifo[0] <= 0;
+    212                                                                                              case ( fifo[0][3:0] )
+    213             1                         13                                                     4'd1: event_out_0 <= 1;
+    214             1                          8                                                     4'd2: event_out_1 <= 1;
+    215             1                          8                                                     4'd3: event_out_2 <= 1;
+    216             1                          6                                                     4'd4: event_out_3 <= 1;
+    217             1                          8                                                     4'd5: event_out_4 <= 1;
+    218             1                          7                                                     4'd6: event_out_5 <= 1;
+    219             1                          7                                                     4'd7: event_out_6 <= 1;
+    220             1                          5                                                     4'd8: event_out_7 <= 1;
+    221             1                          4                                                     4'd9: event_out_8 <= 1;
+    222                                                                                              endcase
+    223                                                                                          end
+    224                                                                                      end
+    225                                                                                  end
+    226                                                                              end
+    227                                                                          end
+    228                                                                      end
+    229                                                                  end
+    230                                                                  //Ñ¹¶ÑÕ»
+    231                                                                  if (ready_dly)
+    232                                                                  begin
+    233                                                                      if ( event_in_0|evt_flag0 )
+    234                                                                      begin
+    235             1                       1404                                 fifo[0] <= {1'b1,4'd1};
+    236             1                       1404                                 fifo[1] <= fifo[0];
+    237             1                       1404                                 fifo[2] <= fifo[1];
+    238             1                       1404                                 fifo[3] <= fifo[2];
+    239             1                       1404                                 fifo[4] <= fifo[3];
+    240             1                       1404                                 fifo[5] <= fifo[4];
+    241             1                       1404                                 fifo[6] <= fifo[5];
+    242             1                       1404                                 fifo[7] <= fifo[6];
+    243             1                       1404                                 fifo[8] <= fifo[7];
+    244             1                       1404                                 evt_flag0 <= 0;
+    245                                                                      end
+    246                                                                      if ( event_in_1|evt_flag1 )
+    247                                                                      begin
+    248             1                       1302                                 evt_flag0 <= event_in_0|evt_flag0;
+    249             1                       1302                                 fifo[0] <= {1'b1,4'd2};
+    250             1                       1302                                 fifo[1] <= fifo[0];
+    251             1                       1302                                 fifo[2] <= fifo[1];
+    252             1                       1302                                 fifo[3] <= fifo[2];
+    253             1                       1302                                 fifo[4] <= fifo[3];
+    254             1                       1302                                 fifo[5] <= fifo[4];
+    255             1                       1302                                 fifo[6] <= fifo[5];
+    256             1                       1302                                 fifo[7] <= fifo[6];
+    257             1                       1302                                 fifo[8] <= fifo[7];
+    258             1                       1302                                 evt_flag1 <= 0;
+    259                                                                      end
+    260                                                                      if ( event_in_2|evt_flag2 )
+    261                                                                      begin
+    262             1                       1157                                 evt_flag1 <= event_in_1|evt_flag1;
+    263             1                       1157                                 evt_flag0 <= event_in_0|evt_flag0;
+    264             1                       1157                                 fifo[0] <= {1'b1,4'd3};
+    265             1                       1157                                 fifo[1] <= fifo[0];
+    266             1                       1157                                 fifo[2] <= fifo[1];
+    267             1                       1157                                 fifo[3] <= fifo[2];
+    268             1                       1157                                 fifo[4] <= fifo[3];
+    269             1                       1157                                 fifo[5] <= fifo[4];
+    270             1                       1157                                 fifo[6] <= fifo[5];
+    271             1                       1157                                 fifo[7] <= fifo[6];
+    272             1                       1157                                 fifo[8] <= fifo[7];
+    273             1                       1157                                 evt_flag2 <= 0;
+    274                                                                      end
+    275                                                                      if ( event_in_3|evt_flag3 )
+    276                                                                      begin
+    277             1                        965                                 evt_flag2 <= event_in_2|evt_flag2;
+    278             1                        965                                 evt_flag1 <= event_in_1|evt_flag1;
+    279             1                        965                                 evt_flag0 <= event_in_0|evt_flag0;
+    280             1                        965                                 fifo[0] <= {1'b1,4'd4};
+    281             1                        965                                 fifo[1] <= fifo[0];
+    282             1                        965                                 fifo[2] <= fifo[1];
+    283             1                        965                                 fifo[3] <= fifo[2];
+    284             1                        965                                 fifo[4] <= fifo[3];
+    285             1                        965                                 fifo[5] <= fifo[4];
+    286             1                        965                                 fifo[6] <= fifo[5];
+    287             1                        965                                 fifo[7] <= fifo[6];
+    288             1                        965                                 fifo[8] <= fifo[7];
+    289             1                        965                                 evt_flag3 <= 0;
+    290                                                                      end
+    291                                                                      if ( event_in_4|evt_flag4 )
+    292                                                                      begin
+    293             1                        810                                 evt_flag3 <= event_in_3|evt_flag3;
+    294             1                        810                                 evt_flag2 <= event_in_2|evt_flag2;
+    295             1                        810                                 evt_flag1 <= event_in_1|evt_flag1;
+    296             1                        810                                 evt_flag0 <= event_in_0|evt_flag0;
+    297             1                        810                                 fifo[0] <= {1'b1,4'd5};
+    298             1                        810                                 fifo[1] <= fifo[0];
+    299             1                        810                                 fifo[2] <= fifo[1];
+    300             1                        810                                 fifo[3] <= fifo[2];
+    301             1                        810                                 fifo[4] <= fifo[3];
+    302             1                        810                                 fifo[5] <= fifo[4];
+    303             1                        810                                 fifo[6] <= fifo[5];
+    304             1                        810                                 fifo[7] <= fifo[6];
+    305             1                        810                                 fifo[8] <= fifo[7];
+    306             1                        810                                 evt_flag4 <= 0;
+    307                                                                      end
+    308                                                                      if ( event_in_5|evt_flag5 ) begin
+    309             1                        681                                 evt_flag4 <= event_in_4|evt_flag4;
+    310             1                        681                                 evt_flag3 <= event_in_3|evt_flag3;
+    311             1                        681                                 evt_flag2 <= event_in_2|evt_flag2;
+    312             1                        681                                 evt_flag1 <= event_in_1|evt_flag1;
+    313             1                        681                                 evt_flag0 <= event_in_0|evt_flag0;
+    314             1                        681                                 fifo[0] <= {1'b1,4'd6};
+    315             1                        681                                 fifo[1] <= fifo[0];
+    316             1                        681                                 fifo[2] <= fifo[1];
+    317             1                        681                                 fifo[3] <= fifo[2];
+    318             1                        681                                 fifo[4] <= fifo[3];
+    319             1                        681                                 fifo[5] <= fifo[4];
+    320             1                        681                                 fifo[6] <= fifo[5];
+    321             1                        681                                 fifo[7] <= fifo[6];
+    322             1                        681                                 fifo[8] <= fifo[7];
+    323             1                        681                                 evt_flag5 <= 0;
+    324                                                                      end
+    325                                                                      if ( event_in_6|evt_flag6 ) begin
+    326             1                        544                                 evt_flag5 <= event_in_5|evt_flag5;
+    327             1                        544                                 evt_flag4 <= event_in_4|evt_flag4;
+    328             1                        544                                 evt_flag3 <= event_in_3|evt_flag3;
+    329             1                        544                                 evt_flag2 <= event_in_2|evt_flag2;
+    330             1                        544                                 evt_flag1 <= event_in_1|evt_flag1;
+    331             1                        544                                 evt_flag0 <= event_in_0|evt_flag0;
+    332             1                        544                                 fifo[0] <= {1'b1,4'd7};
+    333             1                        544                                 fifo[1] <= fifo[0];
+    334             1                        544                                 fifo[2] <= fifo[1];
+    335             1                        544                                 fifo[3] <= fifo[2];
+    336             1                        544                                 fifo[4] <= fifo[3];
+    337             1                        544                                 fifo[5] <= fifo[4];
+    338             1                        544                                 fifo[6] <= fifo[5];
+    339             1                        544                                 fifo[7] <= fifo[6];
+    340             1                        544                                 fifo[8] <= fifo[7];
+    341             1                        544                                 evt_flag6 <= 0;
+    342                                                                      end
+    343                                                                      if ( event_in_7|evt_flag7 ) begin
+    344             1                        406                                 evt_flag6 <= event_in_6|evt_flag6;
+    345             1                        406                                 evt_flag5 <= event_in_5|evt_flag5;
+    346             1                        406                                 evt_flag4 <= event_in_4|evt_flag4;
+    347             1                        406                                 evt_flag3 <= event_in_3|evt_flag3;
+    348             1                        406                                 evt_flag2 <= event_in_2|evt_flag2;
+    349             1                        406                                 evt_flag1 <= event_in_1|evt_flag1;
+    350             1                        406                                 evt_flag0 <= event_in_0|evt_flag0;
+    351             1                        406                                 fifo[0] <= {1'b1,4'd8};
+    352             1                        406                                 fifo[1] <= fifo[0];
+    353             1                        406                                 fifo[2] <= fifo[1];
+    354             1                        406                                 fifo[3] <= fifo[2];
+    355             1                        406                                 fifo[4] <= fifo[3];
+    356             1                        406                                 fifo[5] <= fifo[4];
+    357             1                        406                                 fifo[6] <= fifo[5];
+    358             1                        406                                 fifo[7] <= fifo[6];
+    359             1                        406                                 fifo[8] <= fifo[7];
+    360             1                        406                                 evt_flag7 <= 0;
+    361                                                                      end
+    362                                                                      if(event_in_8) begin
+    363             1                        268                                 evt_flag7 <= event_in_7|evt_flag7;
+    364             1                        268                                 evt_flag6 <= event_in_6|evt_flag6;
+    365             1                        268                                 evt_flag5 <= event_in_5|evt_flag5;
+    366             1                        268                                 evt_flag4 <= event_in_4|evt_flag4;
+    367             1                        268                                 evt_flag3 <= event_in_3|evt_flag3;
+    368             1                        268                                 evt_flag2 <= event_in_2|evt_flag2;
+    369             1                        268                                 evt_flag1 <= event_in_1|evt_flag1;
+    370             1                        268                                 evt_flag0 <= event_in_0|evt_flag0;
+    371             1                        268                                 fifo[0] <= {1'b1,4'd9};
+    372             1                        268                                 fifo[1] <= fifo[0];
+    373             1                        268                                 fifo[2] <= fifo[1];
+    374             1                        268                                 fifo[3] <= fifo[2];
+    375             1                        268                                 fifo[4] <= fifo[3];
+    376             1                        268                                 fifo[5] <= fifo[4];
+    377             1                        268                                 fifo[6] <= fifo[5];
+    378             1                        268                                 fifo[7] <= fifo[6];
+    379             1                        268                                 fifo[8] <= fifo[7];
+    380                                                                      end
+    381                                                                  end
+    382                                                              end
+    383                                                          end
+    384                                                      end
+    385                                                  end
+    386                                              
+    387                                              endmodule
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        128       128         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for File ../../../src/imports/arbitor/arbitor.v --
+
+       Line                                   Node      1H->0L      0L->1H  "Coverage"
+--------------------------------------------------------------------------------------
+
+Total Node Count     =         64 
+Toggled Node Count   =         64 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (128 of 128 bins)
+
+
+Total Coverage By File (code coverage only, filtered view): 92.69%
+

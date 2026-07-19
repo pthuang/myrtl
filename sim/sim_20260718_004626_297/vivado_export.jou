@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Jul 18 00:47:54 2026
+# Process ID: 1356
+# Current directory: D:/EEDesign/github/myrtl
+# Command line: vivado.exe -mode tcl D:\EEDesign\github\myrtl\map\myrtl_test\myrtl_test.xpr -source D:\EEDesign\github\myrtl\sim\sim_20260718_004626_297\export_modelsim.tcl -log D:\EEDesign\github\myrtl\sim\sim_20260718_004626_297\vivado_export.log -journal D:\EEDesign\github\myrtl\sim\sim_20260718_004626_297\vivado_export.jou -tclargs D:\EEDesign\github\myrtl\sim\sim_20260718_004626_297
+# Log file: D:/EEDesign/github/myrtl/sim/sim_20260718_004626_297/vivado_export.log
+# Journal file: D:\EEDesign\github\myrtl\sim\sim_20260718_004626_297\vivado_export.jou
+# Running On: hunter, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 34227 MB
+#-----------------------------------------------------------
+open_project {D:\EEDesign\github\myrtl\map\myrtl_test\myrtl_test.xpr}
+source {D:\EEDesign\github\myrtl\sim\sim_20260718_004626_297\export_modelsim.tcl}

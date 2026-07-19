@@ -15,47 +15,27 @@
 !readme.md
 # except map directory
 !/map/
+/map/*
 # ignore myrtl_test directory in map directory
+!/map/myrtl_test/
 /map/myrtl_test/*
-/map/*.bat
-/map/*.jou
-/map/*.log
-/map/*.str
-!/map/vitis/
-/map/vitis/*
-!/map/vitis/*.xsa
-!/map/vitis/*.bit
-!/map/vitis/myrtl_test/
-/map/vitis/myrtl_test/*
-!/map/vitis/myrtl_test/src/
-/map/vitis/myrtl_test/src/*
-!/map/vitis/myrtl_test/src/*.c
-!/map/vitis/myrtl_test/src/*.h
-!/map/vitis/myrtl_test/src/*.ld
+!/map/myrtl_test/*.xpr
+!/map/myrtl_test/*.ip_user_files
+!/map/cube_global/*.runs
+/map/cube_global/*.runs/*
+!/map/cube_global/*.runs/impl_1
+/map/cube_global/*.runs/impl_1/*
+!/map/cube_global/*.runs/impl_1/*.rpt
+!/map/cube_global/*.runs/impl_1/*.bit
+!/map/cube_global/*.runs/impl_1/*.ltx
+!/map/tcl/
+!/map/*.tcl
 # script directory
 !/script/
 /script/*
-!/script/tb_arbitor_do/
-!/script/tb_m_spi_do/
-!/script/tb_spi_do/
-!/script/tb_uart_do/
-!/script/*.bat
-!/script/*.do
+/FPGA_PRJ/script/*.wlf
+/FPGA_PRJ/script/*.vcd
 # sim directory
 !/sim/
 # src directory
 !/src/
-/src/bd/*
-# bd directory
-!/src/bd/*.tcl
-# coe directory
-!/src/coe/*
-# constrs directory
-!/src/constrs/*
-# elf directory
-!/src/elf/*
-# src code directory
-!/src/imports/*
-# ip directory
-# ip_repo directory
-!/src/ip_repo/*

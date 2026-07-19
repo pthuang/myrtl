@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Jul 18 00:47:54 2026
+# Process ID: 1356
+# Current directory: D:/EEDesign/github/myrtl
+# Command line: vivado.exe -mode tcl D:\EEDesign\github\myrtl\map\myrtl_test\myrtl_test.xpr -source D:\EEDesign\github\myrtl\sim\sim_20260718_004626_297\export_modelsim.tcl -log D:\EEDesign\github\myrtl\sim\sim_20260718_004626_297\vivado_export.log -journal D:\EEDesign\github\myrtl\sim\sim_20260718_004626_297\vivado_export.jou -tclargs D:\EEDesign\github\myrtl\sim\sim_20260718_004626_297
+# Log file: D:/EEDesign/github/myrtl/sim/sim_20260718_004626_297/vivado_export.log
+# Journal file: D:\EEDesign\github\myrtl\sim\sim_20260718_004626_297\vivado_export.jou
+# Running On: hunter, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 34227 MB
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Xilinx/Vivado/2022.1/scripts/Vivado_init.tcl'
+56 Beta devices matching pattern found, 16 enabled.
+enable_beta_device: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1285.023 ; gain = 0.000
+open_project {D:\EEDesign\github\myrtl\map\myrtl_test\myrtl_test.xpr}
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/EEDesign/github/myrtl/map/myrtl_test/myrtl_test.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+source {D:\EEDesign\github\myrtl\sim\sim_20260718_004626_297\export_modelsim.tcl}
+# if {$argc != 1} {
+#     error "usage: export_modelsim.tcl <absolute-run-directory>"
+# }
+# set run_dir [file normalize [lindex $argv 0]]
+# file mkdir $run_dir
+# export_simulation \
+#   -lib_map_path "D:/modeltech64_2020.4/vivado2022_1_lib" \
+#   -directory $run_dir \
+#   -simulator modelsim \
+#   -use_ip_compiled_libs
+error reading package index file C:/Users/alftor/AppData/Roaming/Xilinx/Vivado/2022.1/XilinxTclStore/tclapp/xilinx/modelsim/pkgIndex.tcl: couldn't read file "C:/Users/alftor/AppData/Roaming/Xilinx/Vivado/2022.1/XilinxTclStore/tclapp/xilinx/modelsim/pkgIndex.tcl": no such file or directory
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "MODELSIM" (Mentor Graphics ModelSim Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: 'D:/EEDesign/github/myrtl/sim/sim_20260718_004626_297/modelsim/tb_arbitor.sh'
+# puts "EXPORT_DONE run_dir=$run_dir"
+EXPORT_DONE run_dir=D:/EEDesign/github/myrtl/sim/sim_20260718_004626_297
+Vivado% INFO: [Common 17-206] Exiting Vivado at Sat Jul 18 00:48:16 2026...

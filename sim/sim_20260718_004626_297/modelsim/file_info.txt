@@ -1,0 +1,3 @@
+arbitor.v,verilog,xil_defaultlib,../../../src/imports/arbitor/arbitor.v,
+tb_arbitor.v,verilog,xil_defaultlib,../../tb_arbitor/tb_arbitor.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

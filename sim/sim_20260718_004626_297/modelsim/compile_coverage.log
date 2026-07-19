@@ -1,0 +1,31 @@
+# do {tb_top_compile_coverage.do}
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 11:03:36 on Jul 18,2026
+# vlog -work xil_defaultlib -incr -mfcu "+cover" ../../../src/imports/arbitor/arbitor.v 
+# -- Compiling module arbitor
+# 
+# Top level modules:
+# 	arbitor
+# End time: 11:03:37 on Jul 18,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 11:03:37 on Jul 18,2026
+# vlog -work xil_defaultlib -incr -mfcu ../../tb_arbitor/tb_arbitor.v 
+# -- Compiling module tb_arbitor
+# 
+# Top level modules:
+# 	tb_arbitor
+# End time: 11:03:37 on Jul 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 11:03:37 on Jul 18,2026
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 11:03:37 on Jul 18,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
